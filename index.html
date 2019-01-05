@@ -381,6 +381,299 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/05/hexo-github/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="杨小芳 Xiaofang Yang">
+      <meta itemprop="description" content="个人博客">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="杨小芳">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/01/05/hexo-github/" class="post-title-link" itemprop="url">Hexo+Github建个人博客</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-01-05 11:50:48 / Modified: 11:53:26" itemprop="dateCreated datePublished" datetime="2019-01-05T11:50:48+01:00">2019-01-05</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/05/hexo-github/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2019/01/05/hexo-github/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/01/05/hexo-github/" class="leancloud_visitors" data-flag-title="Hexo+Github建个人博客">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Views: </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>1、注册一个Github账号，新建一个repository</strong></p>
+<ul>
+<li>命名方式&lt;Github用户名&gt;.github.io，比如我的库叫做yangxfang.github.io。操作完毕后将这个名字输入浏览器地址栏就可以访问个人博客网站啦。</li>
+<li>至于repository的设置，这是个Public库 :)</li>
+</ul>
+<p><img src="/Users/yangxiaofang/Library/Application%20Support/typora-user-images/image-20190105100843763.png" alt="image-20190105100843763"></p>
+<p>​    在Settings里找到Github Pages，这里可以选择一个主题。这里就可以知道在Github里搭建个人博客依赖的技术就是Github Pages啦。</p>
+<p>​    <img src="/Users/yangxiaofang/Library/Application%20Support/typora-user-images/image-20190105101722572.png" alt="image-20190105101722572"></p>
+<p><strong>2、本地安装Hexo，发布到Github</strong></p>
+<ul>
+<li><p>安装依赖组件：Git、Node.js；Windows、Mac或Linux版本均有。</p>
+<p>Mac上的命令如下</p>
+<blockquote>
+<p>sudo brew install git</p>
+<p>sudo brew install nodejs</p>
+<p>sudo brew install npm</p>
+<p>Node.js的安装也可以是：</p>
+<p>curl <a href="https://raw.github.com/creationix/nvm/master/install.sh" target="_blank" rel="noopener">https://raw.github.com/creationix/nvm/master/install.sh</a> | sh</p>
+</blockquote>
+</li>
+<li><p>安装Hexo</p>
+<blockquote>
+<p>npm install -g hexo-cli</p>
+<p>cd 你的个人博客源文件目录    #也可以不用特别指定目录</p>
+<p>hexo init myblog    #自定义名字</p>
+<p>cd myblog    #进入这个myblog目录</p>
+<p>npm install    #配置node</p>
+<p>hexo g &amp;&amp; hexo s        #这会创建基础网页，启动Hexo服务，根据提示拷贝<a href="http://localhost:4000/进入浏览器查看，按ctrl+C停止服务" target="_blank" rel="noopener">http://localhost:4000/进入浏览器查看，按ctrl+C停止服务</a></p>
+</blockquote>
+</li>
+<li><p>安装网站主题，Hexo网站上有非常多主题可选，我选了NexT（<em>详细介绍见<a href="https://theme-next.org" target="_blank" rel="noopener">https://theme-next.org</a></em>）</p>
+<blockquote>
+<p>git clone <a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">https://github.com/theme-next/hexo-theme-next</a> themes/next        #安装完成后可以在Themes目录下看到next目录</p>
+</blockquote>
+</li>
+<li><p>配置hexo，编辑_config.yml</p>
+<blockquote>
+<p>vi _config.yml    #我用VIM编辑，当然你也可以用其他工具编辑</p>
+</blockquote>
+<p>网站基本信息：</p>
+<p><img src="/Users/yangxiaofang/Library/Application%20Support/typora-user-images/image-20190105104342943.png" alt="image-20190105104342943"></p>
+<p>网站主题配置为next，部署方式为git，部署地址为github库的完整url，所属的库branch为master</p>
+<p><em>当然你可以部署到其他branch，那就要去库的设置里把Pages的branch修改一下</em></p>
+<p><img src="/Users/yangxiaofang/Library/Application%20Support/typora-user-images/image-20190105104655508.png" alt="image-20190105104655508"></p>
+</li>
+<li><p>配置主题，编辑themes/next/目录下的_config.yml</p>
+<p>NexT的扩展性很好，有很多插件可以启用，它的中英文网站有具体的说明，下方稍微列举下我配置的。</p>
+<ul>
+<li><p>网页上可见的目录，默认只有home、archives，如需要就去掉#。</p>
+<p><img src="/Users/yangxiaofang/Library/Application%20Support/typora-user-images/image-20190105105451566.png" alt="image-20190105105451566"></p>
+</li>
+<li><p>主题设置，默认Muse，我的是Gemini</p>
+<p><img src="/Users/yangxiaofang/Library/Application%20Support/typora-user-images/image-20190105105643463.png" alt="image-20190105105643463"></p>
+</li>
+<li><p>启用回到顶部b2t，显示下滑条百分比scrollpercent    <em>注意此选项仅对Pisces和Gemini主题有效</em></p>
+<p><img src="/Users/yangxiaofang/Library/Application%20Support/typora-user-images/image-20190105110016820.png" alt="image-20190105110016820"></p>
+</li>
+<li><p>评论功能 :D，这里我使用了Valine</p>
+<p>要用这个功能需要注册Leancloud（<em>免费版即可</em>），新建一个myblog的应用，在应用配置里找到appid和appkey，填在下方</p>
+<p><img src="/Users/yangxiaofang/Library/Application%20Support/typora-user-images/image-20190105110556074.png" alt="image-20190105110556074"></p>
+</li>
+<li><p>同时还可以利用Leancloud来统计每篇文章的访客数量，可以使用相同的appid和appkey</p>
+<p><img src="/Users/yangxiaofang/Library/Application%20Support/typora-user-images/image-20190105110819817.png" alt="image-20190105110819817"></p>
+<p>还没完，在hexo的主_config.yml也需要配置</p>
+<p><img src="/Users/yangxiaofang/Library/Application%20Support/typora-user-images/image-20190105111950331.png" alt="image-20190105111950331"></p>
+<p>安装有关组件并注册：</p>
+<blockquote>
+<p>npm install hexo-leancloud-counter-security –save</p>
+<p>hexo lc-counter r 用户名 密码</p>
+</blockquote>
+</li>
+<li><p>启用分享到其他社交网站的功能</p>
+<p><strong>注意</strong> 很多功能是需要安装依赖包的，具体都会描述在Dependencies里，这就需要回到Hexo myblog目录来安装这些包，例如：</p>
+<blockquote>
+<p>git clone <a href="https://github.com/theme-next/theme-next-needmoreshare2" target="_blank" rel="noopener">https://github.com/theme-next/theme-next-needmoreshare2</a> source/lib/needsharebutton</p>
+</blockquote>
+<p><img src="/Users/yangxiaofang/Library/Application%20Support/typora-user-images/image-20190105111245347.png" alt="image-20190105111245347"></p>
+</li>
+<li><p>搜索功能</p>
+<p><img src="/Users/yangxiaofang/Library/Application%20Support/typora-user-images/image-20190105111539542.png" alt="image-20190105111539542"></p>
+</li>
+<li><p>配置文件那么长，自己多多发掘好用的功能吧 :)</p>
+</li>
+</ul>
+</li>
+<li><p>终于要发布到Github了，让Github和本机相互信任一下 :)</p>
+<ul>
+<li><p>生成SSH</p>
+<blockquote>
+<p>git config –global user.name “yourname”    #用的是Github的用户名</p>
+<p>git config –global user.email “youremail”    #用的是注册Github的邮箱地址</p>
+<p>ssh-keygen -t rsa -C “youremail”</p>
+</blockquote>
+</li>
+<li><p>在执行目录下找到公钥pub和私钥</p>
+<p><img src="/Users/yangxiaofang/Library/Application%20Support/typora-user-images/image-20190105112819264.png" alt="image-20190105112819264"></p>
+</li>
+<li><p>回到Github的个人设置页面，创建一个新的SSH and GPG keys，将公钥内容完整复制到key里，完成后就长这样吧</p>
+<p><img src="/Users/yangxiaofang/Library/Application%20Support/typora-user-images/image-20190105113130759.png" alt="image-20190105113130759"></p>
+</li>
+<li><p>部署Hexo</p>
+<blockquote>
+<p>npm install hexo-deployer-git –save    #安装组件</p>
+<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</p>
+</blockquote>
+</li>
+<li><p>部署完毕后，就可以在Github的库里看到所有的文件，打开网址yangxfang.github.io 就👌啦</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>3、写博客</strong></p>
+<ul>
+<li><p>新建博客</p>
+<blockquote>
+<p>hexo new post “标题”</p>
+</blockquote>
+<p>新的md文件就会出现在source/_posts/目录下</p>
+</li>
+<li><p>编辑内容</p>
+<p>md文件需要用Markdown编辑工具，我用的是Typora</p>
+</li>
+<li><p>发布</p>
+<blockquote>
+<p>hexo g &amp;&amp; hexo d</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>4、如果觉得github.io网址不够酷</strong></p>
+<p>​    那就自己买个域名，解析为Github的IP，在GitHub里设置自定义的域名，source目录下创建cname文件（无后缀），写进自定义的域名，最后，再发布一次Hexo到Github</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+<h2 id="博客最最最重要的当然就是内容，我要不断学习Markdown编辑方式，把自己的学习和心得体会都记录下来"><a href="#博客最最最重要的当然就是内容，我要不断学习Markdown编辑方式，把自己的学习和心得体会都记录下来" class="headerlink" title="博客最最最重要的当然就是内容，我要不断学习Markdown编辑方式，把自己的学习和心得体会都记录下来 ^ ^"></a>博客最最最重要的当然就是内容，我要不断学习Markdown编辑方式，把自己的学习和心得体会都记录下来 ^ ^</h2>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/01/Starting-my-blog/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -591,7 +884,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -608,7 +901,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">tags</span>
                   
                 </div>
@@ -1214,6 +1509,8 @@
 
   
   
+    
+      
     
       
     
