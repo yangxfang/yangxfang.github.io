@@ -392,7 +392,7 @@
                 
               
 
-              <time title="Created: 2019-01-05 11:50:48" itemprop="dateCreated datePublished" datetime="2019-01-05T11:50:48+01:00">2019-01-05</time>
+              <time title="Created: 2019-01-05 11:50:48" itemprop="dateCreated datePublished" datetime="2019-01-05T11:50:48-05:00">2019-01-05</time>
             
 
             
@@ -409,7 +409,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-01-06 17:26:42" itemprop="dateModified" datetime="2019-01-06T17:26:42+01:00">2019-01-06</time>
+                <time title="Modified: 2019-01-06 11:26:42" itemprop="dateModified" datetime="2019-01-06T11:26:42-05:00">2019-01-06</time>
               
             
           </span>
@@ -469,62 +469,76 @@
 <li>命名方式<code>&lt;Github用户名&gt;.github.io</code>，比如我的库叫做yangxfang.github.io。操作完毕后将这个名字输入浏览器地址栏就可以访问个人博客网站啦。</li>
 <li>至于repository的设置，这是个Public库 :)</li>
 </ul>
-<p><img src="assets/image-20190105100843763.png" alt="image-20190105100843763"></p>
+<p><img src="/2019/01/05/hexo-github/image-20190105100843763.png" alt="image-20190105100843763"></p>
 <p>​    在Settings里找到Github Pages，这里可以选择一个主题。这里就可以知道在Github里搭建个人博客依赖的技术就是Github Pages啦。</p>
-<p>​    <img src="assets/image-20190105101722572.png" alt="image-20190105101722572"></p>
+<p>​    <img src="/2019/01/05/hexo-github/image-20190105101722572.png" alt="image-20190105101722572"></p>
 <h2 id="本地安装Hexo，发布到Github"><a href="#本地安装Hexo，发布到Github" class="headerlink" title="本地安装Hexo，发布到Github"></a>本地安装Hexo，发布到Github</h2><ul>
 <li><p>安装依赖组件：<code>Git</code>、<code>Node.js</code>；Windows、Mac或Linux版本均有。</p>
 <p>Mac上的命令如下</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo brew install git</span><br><span class="line">sudo brew install nodejs</span><br><span class="line">sudo brew install npm</span><br></pre></td></tr></table></figure>
+<pre><code class="sh">sudo brew install git
+sudo brew install nodejs
+sudo brew install npm
+</code></pre>
 <p>Node.js的安装也可以是：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl https://raw.github.com/creationix/nvm/master/install.sh | sh</span><br></pre></td></tr></table></figure>
+<pre><code class="sh">curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+</code></pre>
 </li>
 <li><p>安装Hexo</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<pre><code class="sh">npm install -g hexo-cli
+</code></pre>
 <p>cd 你的个人博客源文件目录，也可以不用特别指定目录</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo init myblog	<span class="comment">#自定义名字</span></span><br><span class="line"><span class="built_in">cd</span> myblog	<span class="comment">#进入这个myblog目录</span></span><br><span class="line">npm install	<span class="comment">#配置node</span></span><br><span class="line">hexo g &amp;&amp; hexo s		<span class="comment">#这会创建基础网页，启动Hexo服务，根据提示拷贝http://localhost:4000/进入浏览器查看，按ctrl+C停止服务</span></span><br></pre></td></tr></table></figure>
+<pre><code class="sh">hexo init myblog    #自定义名字
+cd myblog    #进入这个myblog目录
+npm install    #配置node
+hexo g &amp;&amp; hexo s        #这会创建基础网页，启动Hexo服务，根据提示拷贝http://localhost:4000/进入浏览器查看，按ctrl+C停止服务
+</code></pre>
 </li>
 <li><p>安装网站主题，Hexo网站上有非常多主题可选，我选了NexT（<em>详细介绍见<a href="https://theme-next.org" target="_blank" rel="noopener">https://theme-next.org</a></em>）</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next		<span class="comment">#安装完成后可以在Themes目录下看到next目录</span></span><br></pre></td></tr></table></figure>
+<pre><code class="sh">git clone https://github.com/theme-next/hexo-theme-next themes/next        #安装完成后可以在Themes目录下看到next目录
+</code></pre>
 </li>
 <li><p>配置hexo，编辑<code>_config.yml</code></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi _config.yml	<span class="comment">#我用VIM编辑，当然你也可以用其他工具编辑</span></span><br></pre></td></tr></table></figure>
+<pre><code class="sh">vi _config.yml    #我用VIM编辑，当然你也可以用其他工具编辑
+</code></pre>
 <p>网站基本信息：</p>
-<p><img src="assets/image-20190105104342943.png" alt="image-20190105104342943"></p>
+<p><img src="/2019/01/05/hexo-github/image-20190105104342943.png" alt="image-20190105104342943"></p>
 <p>网站主题配置为next，部署方式为git，部署地址为github库的完整url，所属的库branch为master</p>
 <p><em>当然你可以部署到其他branch，那就要去库的设置里把Pages的branch修改一下</em></p>
-<p><img src="assets/image-20190105104655508.png" alt="image-20190105104655508"></p>
+<p><img src="/2019/01/05/hexo-github/image-20190105104655508.png" alt="image-20190105104655508"></p>
 </li>
 <li><p>配置主题，编辑<code>themes/next/目录下的_config.yml</code></p>
 <p>NexT的扩展性很好，有很多插件可以启用，它的中英文网站有具体的说明，下方稍微列举下我配置的。</p>
 <ul>
 <li><p>网页上可见的目录，默认只有home、archives，如需要就去掉#。</p>
-<p><img src="assets/image-20190105105451566.png" alt="image-20190105105451566"></p>
+<p><img src="/2019/01/05/hexo-github/image-20190105105451566.png" alt="image-20190105105451566"></p>
 </li>
 <li><p>主题设置，默认Muse，我的是Gemini</p>
-<p><img src="assets/image-20190105105643463.png" alt="image-20190105105643463"></p>
+<p><img src="/2019/01/05/hexo-github/image-20190105105643463.png" alt="image-20190105105643463"></p>
 </li>
 <li><p>启用回到顶部b2t，显示下滑条百分比scrollpercent    <em>注意此选项仅对Pisces和Gemini主题有效</em></p>
-<p><img src="assets/image-20190105110016820.png" alt="image-20190105110016820"></p>
+<p><img src="/2019/01/05/hexo-github/image-20190105110016820.png" alt="image-20190105110016820"></p>
 </li>
 <li><p>评论功能 :D，这里我使用了Valine</p>
 <p>要用这个功能需要注册Leancloud（<em>免费版即可</em>），新建一个myblog的应用，在应用配置里找到appid和appkey，填在下方</p>
-<p><img src="assets/image-20190105110556074.png" alt="image-20190105110556074"></p>
+<p><img src="/2019/01/05/hexo-github/image-20190105110556074.png" alt="image-20190105110556074"></p>
 </li>
 <li><p>同时还可以利用Leancloud来统计每篇文章的访客数量，可以使用相同的appid和appkey</p>
-<p><img src="assets/image-20190105110819817.png" alt="image-20190105110819817"></p>
+<p><img src="/2019/01/05/hexo-github/image-20190105110819817.png" alt="image-20190105110819817"></p>
 <p>还没完，在hexo的主_config.yml也需要配置</p>
-<p><img src="assets/image-20190105111950331.png" alt="image-20190105111950331"></p>
+<p><img src="/2019/01/05/hexo-github/image-20190105111950331.png" alt="image-20190105111950331"></p>
 <p>安装有关组件并注册：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-leancloud-counter-security --save</span><br><span class="line">hexo lc-counter r 用户名 密码</span><br></pre></td></tr></table></figure>
+<pre><code class="sh">npm install hexo-leancloud-counter-security --save
+hexo lc-counter r 用户名 密码
+</code></pre>
 </li>
 <li><p>启用分享到其他社交网站的功能</p>
 <p><strong><code>注意</code></strong> 很多功能是需要安装依赖包的，具体都会描述在Dependencies里，这就需要回到Hexo myblog目录来安装这些包，例如：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/theme-next-needmoreshare2 <span class="built_in">source</span>/lib/needsharebutton</span><br></pre></td></tr></table></figure>
-<p><img src="assets/image-20190105111245347.png" alt="image-20190105111245347"></p>
+<pre><code class="sh">git clone https://github.com/theme-next/theme-next-needmoreshare2 source/lib/needsharebutton
+</code></pre>
+<p><img src="/2019/01/05/hexo-github/image-20190105111245347.png" alt="image-20190105111245347"></p>
 </li>
 <li><p>搜索功能</p>
-<p><img src="assets/image-20190105111539542.png" alt="image-20190105111539542"></p>
+<p><img src="/2019/01/05/hexo-github/image-20190105111539542.png" alt="image-20190105111539542"></p>
 </li>
 <li><p>配置文件那么长，自己多多发掘好用的功能吧 :)</p>
 </li>
@@ -533,16 +547,21 @@
 <li><p>终于要发布到Github了，让Github和本机相互信任一下 :)</p>
 <ul>
 <li><p>生成SSH</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"yourname"</span>	<span class="comment">#用的是Github的用户名</span></span><br><span class="line">git config --global user.email <span class="string">"youremail"</span>	<span class="comment">#用的是注册Github的邮箱地址</span></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">"youremail"</span></span><br></pre></td></tr></table></figure>
+<pre><code class="sh">git config --global user.name &quot;yourname&quot;    #用的是Github的用户名
+git config --global user.email &quot;youremail&quot;    #用的是注册Github的邮箱地址
+ssh-keygen -t rsa -C &quot;youremail&quot;
+</code></pre>
 </li>
 <li><p>在执行目录下找到公钥<code>pub</code>和私钥</p>
-<p><img src="assets/image-20190105112819264.png" alt="image-20190105112819264"></p>
+<p><img src="/2019/01/05/hexo-github/image-20190105112819264.png" alt="image-20190105112819264"></p>
 </li>
 <li><p>回到Github的个人设置页面，创建一个新的SSH and GPG keys，将公钥内容完整复制到key里，完成后就长这样吧</p>
-<p><img src="assets/image-20190105113130759.png" alt="image-20190105113130759"></p>
+<p><img src="/2019/01/05/hexo-github/image-20190105113130759.png" alt="image-20190105113130759"></p>
 </li>
 <li><p>部署Hexo</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save	<span class="comment">#安装组件</span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+<pre><code class="sh">npm install hexo-deployer-git --save    #安装组件
+hexo clean &amp;&amp; hexo g &amp;&amp; hexo d
+</code></pre>
 </li>
 <li><p>部署完毕后，就可以在Github的库里看到所有的文件，打开网址yangxfang.github.io 就👌啦</p>
 </li>
@@ -551,13 +570,14 @@
 </ul>
 <h2 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h2><ul>
 <li><p>新建博客</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post <span class="string">"标题"</span></span><br></pre></td></tr></table></figure>
+<pre><code class="sh">hexo new post &quot;标题&quot;
+</code></pre>
 <p>新的md文件就会出现在<code>source/_posts/</code>目录下</p>
 </li>
 <li><p>编辑内容</p>
 <p>md文件需要用<code>Markdown编辑工具</code>，我用的是Typora</p>
 <p>有关插入图片，这真是折腾了我好一会。首先，在Typora里使用相对目录（可以启动设置自动创建assets目录在md文件同级目录下），插入图后时就是这样：</p>
-<p><img src="assets/image-20190106170130686-6790490.png" alt="image-20190106170130686"></p>
+<p><img src="/2019/01/05/hexo-github/image-20190106170130686-6790490.png" alt="image-20190106170130686"></p>
 <p>网站启动后自然就会尝试在网站目录下寻找assets文件夹，然而找不到，就无法显示图片了。所以，要将assets目录复制到：</p>
 <ol>
 <li>/public</li>
@@ -566,11 +586,13 @@
 <p>搞定后，无论是在网站主页显示的文章内容还是文章页面都能看到图片啦。</p>
 </li>
 <li><p>发布</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+<pre><code class="sh">hexo g &amp;&amp; hexo d
+</code></pre>
 </li>
 </ul>
 <h2 id="如果觉得github-io网址不够酷"><a href="#如果觉得github-io网址不够酷" class="headerlink" title="如果觉得github.io网址不够酷"></a>如果觉得github.io网址不够酷</h2><p>那就自己买个域名，解析为Github的IP，在GitHub里设置自定义的域名，source目录下创建cname文件（无后缀），写进自定义的域名，最后，再发布一次Hexo到Github</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+<pre><code class="sh">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d
+</code></pre>
 <p><strong>博客最最最重要的当然就是内容，我要不断学习Markdown编辑方式，把自己的学习和心得体会都记录下来 ^  ^ </strong></p>
 
           
@@ -677,7 +699,7 @@
                 
               
 
-              <time title="Created: 2019-01-01 18:14:22" itemprop="dateCreated datePublished" datetime="2019-01-01T18:14:22+01:00">2019-01-01</time>
+              <time title="Created: 2019-01-01 18:14:22" itemprop="dateCreated datePublished" datetime="2019-01-01T18:14:22-05:00">2019-01-01</time>
             
 
             
@@ -694,7 +716,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-01-06 16:54:05" itemprop="dateModified" datetime="2019-01-06T16:54:05+01:00">2019-01-06</time>
+                <time title="Modified: 2019-01-06 10:54:05" itemprop="dateModified" datetime="2019-01-06T10:54:05-05:00">2019-01-06</time>
               
             
           </span>
@@ -934,6 +956,7 @@
 
   
 </div>
+
 
 
 
