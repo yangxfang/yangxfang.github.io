@@ -124,9 +124,10 @@
 <meta property="og:image" content="http://yoursite.com/2019/01/05/hexo-github/image-20190105111950331.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/05/hexo-github/image-20190105111245347.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/05/hexo-github/image-20190105111539542.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/05/hexo-github/image-20190115214705591.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/05/hexo-github/image-20190105112819264.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/05/hexo-github/image-20190105113130759.png">
-<meta property="og:updated_time" content="2019-01-15T20:01:38.678Z">
+<meta property="og:updated_time" content="2019-01-15T20:47:25.236Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+Github建个人博客">
 <meta name="twitter:description" content="注册一个Github账号，新建一个repository#  命名方式&amp;lt;Github用户名&amp;gt;.github.io，比如我的库叫做yangxfang.github.io。操作完毕后将这个名字输入浏览器地址栏就可以访问个人博客网站啦。 至于repository的设置，这是个Public库 😃   ​	在Settings里找到Github Pages，这里可以选择一个主题。这里就可以知道在">
@@ -424,7 +425,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-01-15 21:01:38" itemprop="dateModified" datetime="2019-01-15T21:01:38+01:00">2019-01-15</time>
+                <time title="修改时间：2019-01-15 21:47:25" itemprop="dateModified" datetime="2019-01-15T21:47:25+01:00">2019-01-15</time>
               
             
           </span>
@@ -554,6 +555,10 @@
 <p><img src="/2019/01/05/hexo-github/image-20190105111539542.png" alt="image-20190105111539542"></p>
 </li>
 <li>
+<p>主页不显示全文，仅预览</p>
+<p><img src="/2019/01/05/hexo-github/image-20190115214705591.png" alt="image-20190115214705591"></p>
+</li>
+<li>
 <p>配置文件那么长，自己多多发掘好用的功能吧 😃</p>
 </li>
 </ul>
@@ -601,18 +606,7 @@
 <p>在文章内插入目录， 首先安装组件</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-renderer-markdown-it --save</span><br><span class="line">npm i hexo-renderer-markdown-it-plus --save</span><br></pre></td></tr></table></figure>
 <p>在<code>_config.yml</code>里添加如下内容</p>
-<blockquote>
-<p>markdown_it_plus:</p>
-<p>​    highlight: true</p>
-<p>​    html: true</p>
-<p>​    xhtmlOut: true</p>
-<p>​    breaks: true</p>
-<p>​    langPrefix:</p>
-<p>​    linkify: true</p>
-<p>​    typographer:</p>
-<p>​    quotes:</p>
-<p>​    pre_class: highlight</p>
-</blockquote>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">markdown_it_plus:</span></span><br><span class="line"><span class="attr">  highlight:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  html:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  xhtmlOut:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  breaks:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  langPrefix:</span></span><br><span class="line"><span class="attr">  linkify:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  typographer:</span></span><br><span class="line"><span class="attr">  quotes:</span></span><br><span class="line"><span class="attr">  pre_class:</span> <span class="string">highlight</span></span><br></pre></td></tr></table></figure>
 <p>在文章内需要插入目录的位置输入<code>@[TOC]</code></p>
 </li>
 </ul>
