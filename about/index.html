@@ -105,10 +105,9 @@
 
 
   <meta name="description" content="个人博客">
-<meta name="keywords" content="信息安全,隐私,IT控制,审计,Information Security,Privacy,IT Control,Audit">
 <meta property="og:type" content="website">
 <meta property="og:title" content="about">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta property="og:url" content="https://yangxfang.github.io/about/index.html">
 <meta property="og:site_name" content="杨小芳">
 <meta property="og:description" content="个人博客">
 <meta property="og:locale" content="zh-CN">
@@ -122,7 +121,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/">
+  <link rel="canonical" href="https://yangxfang.github.io/about/">
 
 
 
@@ -273,7 +272,7 @@
         
         
           
-          <li class="menu-item menu-item-免责声明-disclaimer">
+          <li class="menu-item menu-item-免责声明disclaimer">
 
     
     
@@ -283,7 +282,7 @@
 
     
 
-    <a href="/Disclaimer/" rel="section"><i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>免责声明 Disclaimer</a>
+    <a href="/Disclaimer/" rel="section"><i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>免责声明Disclaimer</a>
 
   </li>
 
@@ -696,7 +695,7 @@
   <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
   <script>
     var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
+    var guest = 'nick,mail';
     guest = guest.split(',').filter(function (item) {
       return GUEST.indexOf(item) > -1;
     });
@@ -710,7 +709,7 @@
       avatar: 'mm',
       meta:guest,
       pageSize: '10' || 10,
-      visitor: true
+      visitor: false
     });
   </script>
 
