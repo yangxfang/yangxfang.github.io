@@ -106,25 +106,28 @@
 
 
 
-  <meta name="description" content="2019年计划  写个人博客 每天一杯咖啡 坚持义工写信 坚持每周跑步、健身 学会开车">
-<meta name="keywords" content="Say Hi">
+  <meta name="description" content="Context While DevOps model has been widely adopted by IT organization, I do not find a good framework to centrally measure the maturity of the model as well as the user experience as outcome.  So, I">
+<meta name="keywords" content="DevOps,review framework">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Starting my blog">
-<meta property="og:url" content="https://yangxfang.cn/2019/01/01/Starting-my-blog/index.html">
+<meta property="og:title" content="DevOps benchmarking metrics and review framework">
+<meta property="og:url" content="https://yangxfang.cn/DevSecOps-Measurement.html">
 <meta property="og:site_name" content="杨小芳">
-<meta property="og:description" content="2019年计划  写个人博客 每天一杯咖啡 坚持义工写信 坚持每周跑步、健身 学会开车">
+<meta property="og:description" content="Context While DevOps model has been widely adopted by IT organization, I do not find a good framework to centrally measure the maturity of the model as well as the user experience as outcome.  So, I">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-06T15:54:05.181Z">
+<meta property="og:image" content="https://yangxfang.cn/Capability-model.png">
+<meta property="og:image" content="https://yangxfang.cn/Metrics-overview.png">
+<meta property="og:updated_time" content="2019-01-15T19:47:11.485Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Starting my blog">
-<meta name="twitter:description" content="2019年计划  写个人博客 每天一杯咖啡 坚持义工写信 坚持每周跑步、健身 学会开车">
+<meta name="twitter:title" content="DevOps benchmarking metrics and review framework">
+<meta name="twitter:description" content="Context While DevOps model has been widely adopted by IT organization, I do not find a good framework to centrally measure the maturity of the model as well as the user experience as outcome.  So, I">
+<meta name="twitter:image" content="https://yangxfang.cn/Capability-model.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://yangxfang.cn/2019/01/01/Starting-my-blog/">
+  <link rel="canonical" href="https://yangxfang.cn/DevSecOps-Measurement.html">
 
 
 
@@ -134,7 +137,7 @@
   };
 </script>
 
-  <title>Starting my blog | 杨小芳</title>
+  <title>DevOps benchmarking metrics and review framework | 杨小芳</title>
   
 
 
@@ -368,7 +371,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yangxfang.cn/2019/01/01/Starting-my-blog/">
+    <link itemprop="mainEntityOfPage" href="https://yangxfang.cn/DevSecOps-Measurement.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨小芳 Xiaofang Yang">
@@ -385,7 +388,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Starting my blog
+          <h1 class="post-title" itemprop="name headline">DevOps benchmarking metrics and review framework
 
               
             
@@ -411,7 +414,7 @@
                 
               
 
-              <time title="创建时间：2019-01-01 18:14:22" itemprop="dateCreated datePublished" datetime="2019-01-01T18:14:22+01:00">2019-01-01</time>
+              <time title="创建时间：2019-01-11 15:45:42" itemprop="dateCreated datePublished" datetime="2019-01-11T15:45:42+01:00">2019-01-11</time>
             
 
             
@@ -428,7 +431,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-01-06 16:54:05" itemprop="dateModified" datetime="2019-01-06T16:54:05+01:00">2019-01-06</time>
+                <time title="修改时间：2019-01-15 20:47:11" itemprop="dateModified" datetime="2019-01-15T20:47:11+01:00">2019-01-15</time>
               
             
           </span>
@@ -461,15 +464,494 @@
       
 
       
-        <h1><span id="2019年计划"> 2019年计划</span></h1>
+        <h2><span id="context"> Context</span></h2>
+<p>While DevOps model has been widely adopted by IT organization, I do not find a good framework to centrally measure the maturity of the model as well as the user experience as outcome.  So, I try to build one to provide a clear guidance, and I’d like to call it <code>DevOps benchmarking metrics and review framework</code>.</p>
+<p>This is not created from scratch, but is based on a lot of works and analysis done by different orgs.  The major source of reference is <a href="https://tech.gsa.gov/guides/dev_sec_ops_guide/" target="_blank" rel="noopener">DevSecOps guides from GSA</a>.</p>
+<p>I hope this could be a good reading materials for peoples managing a DevOps team or working in security, compliance and risk areas. This is a high level review guideline, not a cookbook of DevOps or review. If you have any comments or questions, please leave a message below or contact me via email which can be found from my blog.</p>
+<p><ul class="markdownIt-TOC">
+<li><a href="#context">Context</a></li>
+<li><a href="#what-do-we-want-to-achieve-through-devops">What do we want to achieve through DevOps?</a></li>
+<li><a href="#what-to-look-at-for-the-capabilities-we-want-to-achieve">What to look at for the capabilities we want to achieve?</a></li>
+<li><a href="#which-metrics-can-be-used-to-measure-these-capabilities">Which metrics can be used to measure these capabilities?</a></li>
+<li><a href="#reference">Reference</a>
 <ul>
-<li>写个人博客</li>
-<li>每天一杯咖啡</li>
-<li>坚持义工写信</li>
-<li>坚持每周跑步、健身</li>
-<li>学会开车</li>
+<li><a href="#details-of-review-topics">Details of review topics</a>
+<ul>
+<li><a href="#governance-pillar">Governance pillar</a></li>
+<li><a href="#process-pillar">Process pillar</a>
+<ul>
+<li><a href="#demand-shaping-biz-value-tracking">Demand shaping &amp; biz value tracking</a></li>
+<li><a href="#user-centric-design">User centric design</a></li>
+<li><a href="#devsecops-model">DevSecOps model</a>
+<ul>
+<li><a href="#agile-planning-incl-change-management">Agile planning (incl. Change management)</a></li>
+<li><a href="#ci-cd">CI &amp; CD</a></li>
+<li><a href="#testing-strategy-quality-assurance">Testing strategy &amp; quality assurance</a></li>
+<li><a href="#logging-monitoring">Logging &amp; monitoring</a></li>
+<li><a href="#application-security">Application security</a></li>
+<li><a href="#risk-management">Risk management</a></li>
 </ul>
-<hr>
+</li>
+<li><a href="#business-continuity">Business continuity</a></li>
+</ul>
+</li>
+<li><a href="#technology-pillar">Technology Pillar</a>
+<ul>
+<li><a href="#automation-capability-both-biz-and-it-processes">Automation capability (both biz and IT processes)</a></li>
+<li><a href="#resilience-of-technologies">Resilience of technologies</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#details-of-benchmarking-metrics">Details of benchmarking metrics</a>
+<ul>
+<li><a href="#productivity">Productivity</a></li>
+<li><a href="#risk-management-capability">Risk management capability</a></li>
+<li><a href="#usability">Usability</a></li>
+<li><a href="#reliability">Reliability</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+<h2><span id="what-do-we-want-to-achieve-through-devops"> What do we want to achieve through DevOps?</span></h2>
+<p>First of all, we expect the team having a sustainable way to improve user experience continuously. <strong>User means not only end user, but also other business stakeholders and IT support partners.</strong></p>
+<p>To achieve that, the key capabilities should be defined <strong>from both DevOps model and the product perspectives.</strong></p>
+<p>I draw a diagram to better explain the relationship between the aim and the key capabilities, as below.</p>
+<p><img src="/Capability-model.png" alt=""></p>
+<h2><span id="what-to-look-at-for-the-capabilities-we-want-to-achieve"> What to look at for the capabilities we want to achieve?</span></h2>
+<p>Ok, now list down the main topics for assessing the capabilities identified above. I group them in 3 pillars: Governance, Process and Technology. The code of each capability (<em>A, B, C, D</em>) is put next to each topic to link them up.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Governance</strong></th>
+<th><strong>Process</strong></th>
+<th><strong>Technology</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Team structure &amp;   location <code>A</code> <code>C</code></td>
+<td>Demand shaping &amp; biz value tracking    <code>A</code> <code>C</code></td>
+<td>Automation capability<br><em>(both biz and IT processes)</em>    <code>A</code> <code>B</code> <code>D</code></td>
+</tr>
+<tr>
+<td>Role &amp; responsibility &amp;   people profile<br> <em>(both internal &amp; external   resources)</em>   <code>A</code> <code>B</code> <code>C</code> <code>D</code></td>
+<td>User centric design<br>* User interviews<br>* Industry reviews<br>* Product definition &amp; roadmap<br>* A/B testing   <code>A</code> <code>C</code></td>
+<td>Resilience of technologies<br>* Risk level (from legal, security,   compliance standpoints)<br>* Availability of the 3rd party services<br>* Development/update lifecycle     <code>A</code> <code>B</code> <code>D</code></td>
+</tr>
+<tr>
+<td>Budget allocation &amp;   procurement    <code>A</code> <code>B</code></td>
+<td>DevSecOps model<br>* Agile planning (incl. Change   management)<br>* CI &amp; CD<br>* Testing strategy &amp; quality   assurance<br>* Logging &amp; monitoring<br>* Application security<br>* Risk management   <code>A</code> <code>B</code> <code>C</code> <code>D</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Targeting setting    <code>A</code> <code>B</code></td>
+<td>Business continuity<br>* High availability<br>* Disaster recovery     <code>B</code> <code>D</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2><span id="which-metrics-can-be-used-to-measure-these-capabilities"> Which metrics can be used to measure these capabilities?</span></h2>
+<p>After all, it’s always preferred by management team to have more visualized way to know the performance of the model or the product. Of course, it’s also important to have some quantitative KPIs to know which areas still needs improvement. <strong>However, please be noted that, when we decide to improve certain capability,  we should look back to relevant topics and good practices of those topics, but not focus on how to change the value of KPIs.</strong> Why? the later way might lead to KPI manipulation and fake assessment. 😉</p>
+<p>Below graph gives an overview of metrics under each capability, the detailed definitions can be found in “Reference” section. <strong>It’s suggested to focus on the velocity of maturity improvement, than current maturity level.</strong> The reason is simple, as we expect the team to keep improving at a comfortable speed, but not be satisfied with what it is now.</p>
+<p><img src="/Metrics-overview.png" alt=""></p>
+<h2><span id="reference"> Reference</span></h2>
+<h3><span id="details-of-review-topics"> Details of review topics</span></h3>
+<p><em>This could be a good reference to perform a holistic review, I will not further elaborate what to review under each topic.</em></p>
+<h4><span id="governance-pillar"> Governance pillar</span></h4>
+<ol>
+<li>Team structure &amp; location</li>
+<li>Role &amp; responsibility &amp; people profile (both internal &amp; external resources)</li>
+<li>Budget allocation &amp; procurement</li>
+<li>Targeting setting</li>
+</ol>
+<h4><span id="process-pillar"> Process pillar</span></h4>
+<h5><span id="demand-shaping-amp-biz-value-tracking"> Demand shaping &amp; biz value tracking</span></h5>
+<ol>
+<li>Business cases or KPIs definition, quantitative KPI calculation method</li>
+<li>Business case tracking and validation</li>
+<li>Collaboration with business and user story definition</li>
+</ol>
+<h5><span id="user-centric-design"> User centric design</span></h5>
+<ol>
+<li>User interviews</li>
+<li>Industry reviews</li>
+<li>Product definition &amp; roadmap</li>
+<li>A/B testing</li>
+</ol>
+<h5><span id="devsecops-model"> DevSecOps model</span></h5>
+<h6><span id="agile-planning-incl-change-management"> Agile planning (incl. Change management)</span></h6>
+<ol>
+<li>The flow of work: what are the steps it takes to get a Story to Done? what is the definition of done?</li>
+<li>Tracking of the flow</li>
+<li>Built-in quality: link technical standards to work items</li>
+<li>Emergent design vs Intentional architecture: project specific design vs long-term strategy</li>
+<li>Routines for planning: regular personal review and team review, backlog refinement, iteration review, iteration retrospective</li>
+</ol>
+<h6><span id="ci-amp-cd"> CI &amp; CD</span></h6>
+<ol>
+<li>Branching and merging policies</li>
+<li>Tepository management</li>
+<li>Dev/Test/Prod environment and pipeline setup</li>
+<li>Ways of deployments</li>
+<li>Build and release automation: including all mandatory test/scan/approval/technical requirements steps</li>
+</ol>
+<h6><span id="testing-strategy-amp-quality-assurance"> Testing strategy &amp; quality assurance</span></h6>
+<ol>
+<li>Testing strategy and mapping with CI/CD</li>
+<li>Success criteria and target setting</li>
+<li>Automation tools for all types of tests</li>
+<li>Code scan: for quality, security including dependencies</li>
+<li>Manual test and feedback</li>
+<li>Bug tracking</li>
+</ol>
+<h6><span id="logging-amp-monitoring"> Logging &amp; monitoring</span></h6>
+<ol>
+<li>Logging requirements and enables</li>
+<li>Consolidation of logs, alerts, reports</li>
+<li>Monitoring tools</li>
+<li>Tracking of security events, errors, performance issues</li>
+</ol>
+<h6><span id="application-security"> Application security</span></h6>
+<ol>
+<li>Security automation</li>
+<li>Security hardening and monitoring at platform layer</li>
+<li>Secrets (key/token/privileged credentials) protection</li>
+<li>API and web services security configuration and monitoring</li>
+<li>Vulnerability identification and patching process</li>
+<li>Data loss prevention</li>
+</ol>
+<h6><span id="risk-management"> Risk management</span></h6>
+<ol>
+<li>Pilot from risk perspective</li>
+<li>Knowledge base and training</li>
+<li>Dependencies on people and procurement processes</li>
+<li>Architecture and security review</li>
+</ol>
+<h5><span id="business-continuity"> Business continuity</span></h5>
+<ol>
+<li>High availability</li>
+<li>Disaster recovery</li>
+</ol>
+<h4><span id="technology-pillar"> Technology Pillar</span></h4>
+<h5><span id="automation-capability-both-biz-and-it-processes"> Automation capability (both biz and IT processes)</span></h5>
+<ol>
+<li>Automation platform</li>
+<li>Continuity of automation platform</li>
+<li>Control design in automation</li>
+<li>Identity and access management</li>
+<li>Development lifecycle</li>
+<li>Logging and monitoring</li>
+<li>License compliance</li>
+</ol>
+<h5><span id="resilience-of-technologies"> Resilience of technologies</span></h5>
+<ol>
+<li>Risk level (from legal, security, compliance standpoints)</li>
+<li>Availability of the 3rd party services</li>
+<li>Development/update lifecycle</li>
+</ol>
+<h3><span id="details-of-benchmarking-metrics"> Details of benchmarking metrics</span></h3>
+<p><em>The following weights of metrics and maturity values are defined based on my personal perspective from work experience, i.e. very subjective. Anyone who likes to adopt these metrics, should take the risk appetite of the organization into account and adjust them.</em></p>
+<h4><span id="productivity"> Productivity</span></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Metrics</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Scope</strong></th>
+<th><strong>Weight in category</strong></th>
+<th><strong>Low maturity value</strong></th>
+<th><strong>Medium maturity value</strong></th>
+<th style="text-align:left"><strong>High maturity value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Deployment frequency</td>
+<td>Number of deployments to production</td>
+<td>Past 6 months</td>
+<td>5%</td>
+<td>&lt;=1 or &gt;24</td>
+<td>&lt;=6</td>
+<td style="text-align:left">&lt;=24</td>
+</tr>
+<tr>
+<td style="text-align:left">Change volume</td>
+<td>Average number of user stories deployed   in one sprint divided by working days of a sprint</td>
+<td>Past 6 months</td>
+<td>10%</td>
+<td>&lt; 0.2 or &gt; 1</td>
+<td>&gt;= 0.2 and &lt;= 0.3</td>
+<td style="text-align:left">&gt; 0.3 and &lt;= 1</td>
+</tr>
+<tr>
+<td style="text-align:left">Mean change lead time</td>
+<td>Mean time between a code commit and   production deployment of that code</td>
+<td>Past 6 months</td>
+<td>15%</td>
+<td>&gt; 1 month</td>
+<td>&gt;= 2 weeks</td>
+<td style="text-align:left">&lt; 2 weeks</td>
+</tr>
+<tr>
+<td style="text-align:left">Mean Time to realize value</td>
+<td>Mean time between a feature request and   realization of business value from that feature</td>
+<td>Last 3 releases</td>
+<td>10%</td>
+<td>&gt; 1.5 years</td>
+<td>&gt; 9 months</td>
+<td style="text-align:left">&lt;= 9 months</td>
+</tr>
+<tr>
+<td style="text-align:left">Mean time to operate</td>
+<td>Mean time between the beginning of   Sprint 0 to achieving authority to operate</td>
+<td>Last 3 releases</td>
+<td>20%</td>
+<td>&gt; 1 month</td>
+<td>&gt;= 2 weeks</td>
+<td style="text-align:left">&lt; 2 weeks</td>
+</tr>
+<tr>
+<td style="text-align:left">Test automation percentage</td>
+<td>Percentage of test cases automated.</td>
+<td>All active features</td>
+<td>15%</td>
+<td>&lt; 50%</td>
+<td>&lt; 80%</td>
+<td style="text-align:left">&gt;= 80%</td>
+</tr>
+<tr>
+<td style="text-align:left">Developer onboarding mean time</td>
+<td>Time from a developer joining the team   to ability to commit code for production deployment</td>
+<td>Past 1 year</td>
+<td>15%</td>
+<td>&lt; 2 weeks or &gt;= 2 months</td>
+<td>&gt;= 1 month and &lt; 2 months</td>
+<td style="text-align:left">&gt;= 2 weeks and &lt; 1 month</td>
+</tr>
+<tr>
+<td style="text-align:left">Mean time from sourcing to contract</td>
+<td>Mean time from the beginning of   sourcing process to contract sign-off</td>
+<td>Past 1 year</td>
+<td>10%</td>
+<td>&gt; 3 months</td>
+<td>&gt; 1 month</td>
+<td style="text-align:left">&lt;= 1 month</td>
+</tr>
+</tbody>
+</table>
+<h4><span id="risk-management-capability"> Risk management capability</span></h4>
+<table>
+<thead>
+<tr>
+<th><strong>Metrics</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Scope</strong></th>
+<th><strong>Weight in category</strong></th>
+<th><strong>Low maturity value</strong></th>
+<th><strong>Medium maturity value</strong></th>
+<th><strong>High maturity value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mean time to recovery</td>
+<td>Time between a failed production   deployment to full restoration of production operations</td>
+<td>All active features</td>
+<td>15%</td>
+<td>&gt; 1 day</td>
+<td>&gt; 1 hour</td>
+<td>&lt;= 1 hour</td>
+</tr>
+<tr>
+<td>Mean recovery point</td>
+<td>Mean time range of data that is lost   due to an incident</td>
+<td>All active features</td>
+<td>15%</td>
+<td>&gt; 1 day</td>
+<td>&gt; 1 hour</td>
+<td>&lt;= 1 hour</td>
+</tr>
+<tr>
+<td>Bug volume</td>
+<td>Average number of bugs reported after a   release</td>
+<td>Last 3 releases</td>
+<td>5%</td>
+<td>&gt;= 50</td>
+<td>&gt; =10 and &lt; 50</td>
+<td>&lt; 10</td>
+</tr>
+<tr>
+<td>Bug Resolution time</td>
+<td>Mean time to resolve a bug</td>
+<td>Past 6 months</td>
+<td>10%</td>
+<td>&gt; 3 days</td>
+<td>&gt; 1 day and &lt; 3 days</td>
+<td>&lt;= 1 day</td>
+</tr>
+<tr>
+<td>Mean time to patch vulnerability</td>
+<td>Mean time between identification of a   vulnerability in the platform or application and successful production   deployment of a patch</td>
+<td>Past 6 months</td>
+<td>10%</td>
+<td>&gt; 3 weeks</td>
+<td>&gt; 1 week</td>
+<td>&lt;= 1 week</td>
+</tr>
+<tr>
+<td>Logging availability</td>
+<td>Percentage of systems that are logging.</td>
+<td>Platform &amp; application</td>
+<td>10%</td>
+<td>&lt; 50%</td>
+<td>&lt; 80%</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Monitoring availability</td>
+<td>Mean time from event generation to   being available to support team</td>
+<td>Past 6 months</td>
+<td>5%</td>
+<td>&gt; 1 hour</td>
+<td>&gt; 10 mins</td>
+<td>&lt;= 10 mins</td>
+</tr>
+<tr>
+<td>Deployment review percentage</td>
+<td>Percentage of deployments being   reviewed from architecture or security</td>
+<td>Past 1 year</td>
+<td>10%</td>
+<td>&lt; 50%</td>
+<td>&lt; 80%</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Secure secret percentage</td>
+<td>Percentage of app secrets are securely   created &amp; accessed without any human interactions.</td>
+<td>All active features</td>
+<td>10%</td>
+<td>&lt; 50%</td>
+<td>&lt; 80%</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Privilege auditing frequency</td>
+<td>Number of times that users and their   privileges are audited</td>
+<td>Past 1 year</td>
+<td>10%</td>
+<td>&lt;= 2</td>
+<td>&gt; 2 and &lt;=12</td>
+<td>&gt; 12</td>
+</tr>
+</tbody>
+</table>
+<h4><span id="usability"> Usability</span></h4>
+<table>
+<thead>
+<tr>
+<th><strong>Metrics</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Scope</strong></th>
+<th><strong>Weight in category</strong></th>
+<th><strong>Low maturity value</strong></th>
+<th><strong>Medium maturity value</strong></th>
+<th><strong>High maturity value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Completion rate of user tasks</td>
+<td>Percentage of user tasks completed   successfully versus total tasks</td>
+<td>All active features</td>
+<td>35%</td>
+<td>&lt; 50%</td>
+<td>&lt; 80%</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Mean time to complete user tasks</td>
+<td>Mean time for users to complete tasks</td>
+<td>All active features</td>
+<td>35%</td>
+<td>&gt;10 mins</td>
+<td>&gt;1min and &lt;= 10 mins</td>
+<td>&lt;= 1 min</td>
+</tr>
+<tr>
+<td>Test level satisfaction</td>
+<td>Average level of overall impression of   user experience (on a 5-point scale)</td>
+<td>Last 3 releases</td>
+<td>30%</td>
+<td>&lt; 2</td>
+<td>&lt; 4</td>
+<td>&gt;= 4</td>
+</tr>
+</tbody>
+</table>
+<h4><span id="reliability"> Reliability</span></h4>
+<table>
+<thead>
+<tr>
+<th><strong>Metrics</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Scope</strong></th>
+<th><strong>Weight in category</strong></th>
+<th><strong>Low maturity value</strong></th>
+<th><strong>Medium maturity value</strong></th>
+<th><strong>High maturity value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Availability</td>
+<td>Amount of uptime in accordance with the SLA</td>
+<td>In a year</td>
+<td>25%</td>
+<td>&lt;= 99%</td>
+<td>&lt; 99.99%</td>
+<td>&gt;= 99.99%</td>
+</tr>
+<tr>
+<td>Test coverage</td>
+<td>Percentage of code or feature that is   covered by unit, integration, functional and security tests</td>
+<td>All active features</td>
+<td>25%</td>
+<td>&lt; 50%</td>
+<td>&lt; 80%</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Security benchmark deviation</td>
+<td>Deviation between security benchmarks   applied and the baseline</td>
+<td>Platform &amp; application</td>
+<td>25%</td>
+<td>&gt; 50%</td>
+<td>&lt;= 50% and &gt; 0%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>#of MICS control deficiencies</td>
+<td>Number of key control deficiencies in   MICS assessment report</td>
+<td>Latest report within the quarter</td>
+<td>10%</td>
+<td>&gt;= 3 or no report</td>
+<td>&gt; 0 and &lt; 3</td>
+<td>0</td>
+</tr>
+<tr>
+<td>#of monitoring alerts</td>
+<td>Amount of monitoring alerts triggered</td>
+<td>Past 6 months</td>
+<td>15%</td>
+<td>thousands</td>
+<td>hundreds</td>
+<td>tens</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
@@ -485,7 +967,7 @@
       </li>
       <li class="post-copyright-link">
         <strong>本文链接：</strong>
-        <a href="/2019/01/01/Starting-my-blog/" title="Starting my blog">2019/01/01/Starting-my-blog/</a>
+        <a href="/DevSecOps-Measurement.html" title="DevOps benchmarking metrics and review framework">DevSecOps-Measurement.html</a>
       </li>
       <li class="post-copyright-license">
         <strong>版权声明： </strong>
@@ -514,7 +996,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Say-Hi/" rel="tag"># Say Hi</a>
+            <a href="/tags/DevOps/" rel="tag"># DevOps</a>
+          
+            <a href="/tags/review-framework/" rel="tag"># review framework</a>
           
         </div>
       
@@ -547,14 +1031,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/hexo-github.html" rel="next" title="Hexo+Github建个人博客">
+                <i class="fa fa-chevron-left"></i> Hexo+Github建个人博客
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/01/05/hexo-github/" rel="prev" title="Hexo+Github建个人博客">
-                Hexo+Github建个人博客 <i class="fa fa-chevron-right"></i>
+              <a href="/China-regulations.html" rel="prev" title="网络安全法和电子商务法里的IT控制要求">
+                网络安全法和电子商务法里的IT控制要求 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -705,7 +1193,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text"> 2019年计划</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text"> Context</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text"> What do we want to achieve through DevOps?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text"> What to look at for the capabilities we want to achieve?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text"> Which metrics can be used to measure these capabilities?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text"> Reference</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">5.1.</span> <span class="nav-text"> Details of review topics</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">5.1.1.</span> <span class="nav-text"> Governance pillar</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">5.1.2.</span> <span class="nav-text"> Process pillar</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">5.1.2.1.</span> <span class="nav-text"> Demand shaping &amp; biz value tracking</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">5.1.2.2.</span> <span class="nav-text"> User centric design</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">5.1.2.3.</span> <span class="nav-text"> DevSecOps model</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">5.1.2.3.1.</span> <span class="nav-text"> Agile planning (incl. Change management)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">5.1.2.3.2.</span> <span class="nav-text"> CI &amp; CD</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">5.1.2.3.3.</span> <span class="nav-text"> Testing strategy &amp; quality assurance</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">5.1.2.3.4.</span> <span class="nav-text"> Logging &amp; monitoring</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">5.1.2.3.5.</span> <span class="nav-text"> Application security</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">5.1.2.3.6.</span> <span class="nav-text"> Risk management</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">5.1.2.4.</span> <span class="nav-text"> Business continuity</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">5.1.3.</span> <span class="nav-text"> Technology Pillar</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">5.1.3.1.</span> <span class="nav-text"> Automation capability (both biz and IT processes)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">5.1.3.2.</span> <span class="nav-text"> Resilience of technologies</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">5.2.</span> <span class="nav-text"> Details of benchmarking metrics</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">5.2.1.</span> <span class="nav-text"> Productivity</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">5.2.2.</span> <span class="nav-text"> Risk management capability</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">5.2.3.</span> <span class="nav-text"> Usability</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">5.2.4.</span> <span class="nav-text"> Reliability</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
