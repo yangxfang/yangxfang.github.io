@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /categories/
+Allow: /tags/ 
+Allow: /resources/
+Allow: /about/ 
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /images/
+Disallow: /lib/
+
+Sitemap: https://yangxfang.cn/sitemap.xml
+Sitemap: https://yangxfang.cn/baidusitemap.xml
