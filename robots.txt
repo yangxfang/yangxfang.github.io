@@ -5,6 +5,7 @@ Allow: /categories/
 Allow: /tags/ 
 Allow: /resources/
 Allow: /about/ 
+Allow: /2019/
 Disallow: /js/
 Disallow: /css/
 Disallow: /fonts/
