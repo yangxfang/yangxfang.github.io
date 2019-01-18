@@ -1,0 +1,1634 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="google-site-verification" content="QmEcRibUteMpPS6NyBSnXbbe7_spvWSdYh42jVdz3S4">
+<meta name="baidu-site-verification" content="RiinqsunWw">
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="RiinqsunWw">
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=6.7.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.7.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.7.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.7.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="网络安全法和电子商务法里的IT控制要求 说在前面 本文章纯属作者从IT（信息技术）的视角对两个法律的解读，总结出来的内容用于个人学习和讨论的用途，任何单位和个人不得用于商业用途。文章内容的版权和解释权归作者所有。此外，作者不是法律专业人士，不保证解读内容的准确性和完整性，内容不得用于任何与法律有关的学习或者活动。如有任何单位和个人对内容有异议，应该及时向本站书面反馈，并提供身份证明、权属证明或详">
+<meta name="keywords" content="中国法规,网络安全法,电子商务法,安全合规">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网络安全法和电子商务法里的IT控制要求">
+<meta property="og:url" content="https://yangxfang.cn/2019/01/16/China-regulations/index.html">
+<meta property="og:site_name" content="杨小芳">
+<meta property="og:description" content="网络安全法和电子商务法里的IT控制要求 说在前面 本文章纯属作者从IT（信息技术）的视角对两个法律的解读，总结出来的内容用于个人学习和讨论的用途，任何单位和个人不得用于商业用途。文章内容的版权和解释权归作者所有。此外，作者不是法律专业人士，不保证解读内容的准确性和完整性，内容不得用于任何与法律有关的学习或者活动。如有任何单位和个人对内容有异议，应该及时向本站书面反馈，并提供身份证明、权属证明或详">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://yangxfang.cn/2019/01/16/China-regulations/3.JPG">
+<meta property="og:image" content="https://yangxfang.cn/2019/01/16/China-regulations/4.JPG">
+<meta property="og:image" content="https://yangxfang.cn/2019/01/16/China-regulations/2.JPG">
+<meta property="og:image" content="https://yangxfang.cn/2019/01/16/China-regulations/1.JPG">
+<meta property="og:image" content="https://yangxfang.cn/2019/01/16/China-regulations/5.JPG">
+<meta property="og:image" content="https://yangxfang.cn/2019/01/16/China-regulations/6.JPG">
+<meta property="og:image" content="https://yangxfang.cn/2019/01/16/China-regulations/7.JPG">
+<meta property="og:image" content="https://yangxfang.cn/2019/01/16/China-regulations/8.JPG">
+<meta property="og:image" content="https://yangxfang.cn/2019/01/16/China-regulations/9.JPG">
+<meta property="og:updated_time" content="2019-01-18T20:43:02.861Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="网络安全法和电子商务法里的IT控制要求">
+<meta name="twitter:description" content="网络安全法和电子商务法里的IT控制要求 说在前面 本文章纯属作者从IT（信息技术）的视角对两个法律的解读，总结出来的内容用于个人学习和讨论的用途，任何单位和个人不得用于商业用途。文章内容的版权和解释权归作者所有。此外，作者不是法律专业人士，不保证解读内容的准确性和完整性，内容不得用于任何与法律有关的学习或者活动。如有任何单位和个人对内容有异议，应该及时向本站书面反馈，并提供身份证明、权属证明或详">
+<meta name="twitter:image" content="https://yangxfang.cn/2019/01/16/China-regulations/3.JPG">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="杨小芳" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="https://yangxfang.cn/2019/01/16/China-regulations/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>网络安全法和电子商务法里的IT控制要求 | 杨小芳</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">杨小芳</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">Information Security Management</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-免责声明-disclaimer">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/Disclaimer/" rel="section"><i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>免责声明 Disclaimer</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yangxfang.cn/2019/01/16/China-regulations/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="杨小芳 Xiaofang Yang">
+      <meta itemprop="description" content="个人博客">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="杨小芳">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">网络安全法和电子商务法里的IT控制要求
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-01-16 21:29:40" itemprop="dateCreated datePublished" datetime="2019-01-16T21:29:40+01:00">2019-01-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-01-18 21:43:02" itemprop="dateModified" datetime="2019-01-18T21:43:02+01:00">2019-01-18</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/01/16/China-regulations/" class="leancloud_visitors" data-flag-title="网络安全法和电子商务法里的IT控制要求">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1><span id="网络安全法和电子商务法里的it控制要求"> 网络安全法和电子商务法里的IT控制要求</span></h1>
+<p><strong>说在前面</strong></p>
+<p>本文章纯属作者从IT（信息技术）的视角对两个法律的解读，总结出来的内容用于个人学习和讨论的用途，任何单位和个人不得用于商业用途。文章内容的版权和解释权归作者所有。此外，作者不是法律专业人士，不保证解读内容的准确性和完整性，内容不得用于任何与法律有关的学习或者活动。如有任何单位和个人对内容有异议，应该及时向本站书面反馈，并提供身份证明、权属证明或详细情况证明，本站在收到上述文件后将会尽快更新或者移除相关内容。</p>
+<p><em>更多免责条款请参见本站的免责声明。</em></p>
+<hr>
+<p><strong>重要的说明</strong></p>
+<ol>
+<li>本文不再赘述有关网络安全法和电子商务法的背景、意义、生效日期、条款内容等基本信息，有兴趣的人请自行Google或者百度。</li>
+<li>为了便于比较和分析，我将与IT有关的条款分别打了标签，用于注明其所属的控制领域。如果有人感兴趣具体条款和标签如何对应的，请留言，我会再写一篇文章公布细节。</li>
+<li>在后续的分析中我会提到哪些控制要求比较有中国特色，哪些属于常见的行业标准。
+<ul>
+<li>涉及网络安全的，由于行业标准和各国法规十分多，分类依靠本人长期的工作经验总结所得，就不罗列所有的标准了。如果哪位同学做出了条款和各大行业标准对照表的，请不吝分享。</li>
+<li>涉及电子商务的，我参考了英国的<a href="http://www.legislation.gov.uk/uksi/2002/2013/contents/made" target="_blank" rel="noopener">The Electronic Commerce (EC Directive) Regulations 2002</a>以及<a href="https://ico.org.uk/for-organisations/guide-to-pecr/" target="_blank" rel="noopener">Guide to Privacy and Electronic Communications Regulations</a>和<a href="https://ec.europa.eu/growth/sectors/tourism/business-portal/understanding-legislation/legal-regulations-e-commerce_it" target="_blank" rel="noopener">欧盟对电子商务网站的指引</a>。至于为什么只参考了这些呢，Google出来的前几项就是答案 😄 未来有空时，我会去研究研究其他国家或地区的要求的。</li>
+<li>涉及电子支付的，我参考了欧盟的<a href="https://ec.europa.eu/info/law/payment-services-psd-2-directive-eu-2015-2366/law-details_en" target="_blank" rel="noopener">Payment services (PSD 2) - Directive (EU) 2015/2366</a>。</li>
+<li>因为存在多个条款同属一个控制领域，某些条款比较有中国特色，某些比较行业内常见，所以当你看到我说某一个控制领域是有中国特色的，这不意味着整个控制领域都是中国独有的，请不要急于反驳，建议温和地留言并提出你的意见或者问题。谢谢支持。</li>
+</ul>
+</li>
+<li>由于本人长期使用的工作语言是英语，有时候对专业术语的中文表述不是很准确，请见谅。😉</li>
+</ol>
+<p>OK，把重要的免责声明和内容说明都讲清楚了，接下来我就直接开始正题了 😃</p>
+<hr>
+<p><ul class="markdownIt-TOC">
+<li><a href="#1-%E6%8E%A7%E5%88%B6%E9%A2%86%E5%9F%9F%E6%A6%82%E5%86%B5">1. 控制领域概况</a>
+<ul>
+<li><a href="#%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E6%B3%95">网络安全法</a></li>
+<li><a href="#%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E6%B3%95">电子商务法</a></li>
+</ul>
+</li>
+<li><a href="#2-%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E6%B3%95-vs-%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E6%B3%95">2. 网络安全法 vs 电子商务法</a></li>
+<li><a href="#3-%E8%BE%83%E6%9C%89%E4%B8%AD%E5%9B%BD%E7%89%B9%E8%89%B2-vs-%E8%A1%8C%E4%B8%9A%E5%86%85%E5%B8%B8%E8%A7%81">3. 较有中国特色 vs 行业内常见</a></li>
+<li><a href="#4-%E6%8E%A7%E5%88%B6%E8%A6%81%E6%B1%82%E7%9A%84%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4">4. 控制要求的适用范围</a></li>
+</ul>
+</p>
+<h2><span id="1-控制领域概况"> 1. 控制领域概况</span></h2>
+<h3><span id="网络安全法"> 网络安全法</span></h3>
+<p>首先网络安全法，我归类出7个大的领域 <em>（排名不分先后）</em>：</p>
+<ul>
+<li>数字化安全（Digital Security）</li>
+<li>合规</li>
+<li>隐私保护</li>
+<li>治理体系</li>
+<li>分级分类</li>
+<li>业务持续性</li>
+<li>合同与协议</li>
+</ul>
+<p>进一步归类并且统计每一类的要求数量，参见下图。可见，要求较为集中在数字化安全（Digital Security）和合规领域。其中，又以安全事故响应和国家安全审查的要求最多。<code>区别于其他安全规范，网络安全法里特别提及了隐私保护</code>。</p>
+<p><img src="/2019/01/16/China-regulations/3.JPG" alt=""></p>
+<p>作为一个法律文件，它不会提及具体的安全技术或者流程要求，这需要基于安全管理者的经验和认识进行实施。举个例子，第二十一条这么定义的：</p>
+<blockquote>
+<p><strong>第二十一条</strong> 国家实行网络安全等级保护制度。网络运营者应当按照网络安全等级保护制度的要求，履行下列安全保护义务，保障网络免受干扰、破坏或者未经授权的访问，防止网络数据泄露或者被窃取、篡改：<br>
+（一）制定内部安全管理制度和操作规程，确定网络安全负责人，落实网络安全保护责任；<br>
+（二）采取防范计算机病毒和网络攻击、网络侵入等危害网络安全行为的技术措施；<br>
+（三）采取监测、记录网络运行状态、网络安全事件的技术措施，并按照规定留存相关的网络日志不少于六个月；<br>
+（四）采取数据分类、重要数据备份和加密等措施；<br>
+（五）法律、行政法规规定的其他义务。</p>
+</blockquote>
+<p>所以，到底要求仅仅是列举出来的这5条，还是更多？</p>
+<p>偷懒的做法是只关注这5条并有很强的说辞来坚持这个看法；这种情况其实很常见，尤其当没有足够的预算时。</p>
+<p>不过实事求是地看这条要求，重点其实是<code>保障网络免受干扰、破坏或者未经授权的访问，防止网络数据泄露或者被窃取、篡改</code>。虽然访问控制没有在5条里特别说明，我们不能否认这项控制对于达到如上目标的重要性。</p>
+<h3><span id="电子商务法"> 电子商务法</span></h3>
+<p>然后看电子商务法，我归类出7个大的领域 <em>(同样，排名不分先后)</em>：</p>
+<ul>
+<li>用户权益</li>
+<li>合规</li>
+<li>电子支付</li>
+<li>合同与协议</li>
+<li>隐私保护</li>
+<li>治理体系</li>
+<li>数字化安全（Digital Security）</li>
+</ul>
+<p>具体参见下图，可见，用户权益和电子支付被着重提及的领域。数字化安全（Digital Security）看似没有特别描述，但是不要忘记网络安全法哦，合规可不是合一个法律的规就行了。😃</p>
+<p><img src="/2019/01/16/China-regulations/4.JPG" alt=""></p>
+<p><strong>电子商务法的隐私保护和网络安全法的隐私保护有什么区别？</strong></p>
+<table>
+<thead>
+<tr>
+<th>隐私保护<br>子领域</th>
+<th>电子商务法</th>
+<th>网络安全法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>信息收集</strong></td>
+<td><em>无明显区别</em></td>
+<td><em>无明显区别</em></td>
+</tr>
+<tr>
+<td><strong>信息透明</strong></td>
+<td>服务提供者公示隐私请求管理流程的责任</td>
+<td><em>无特别提及</em></td>
+</tr>
+<tr>
+<td><strong>合法合规</strong></td>
+<td>提供信息给有关主管部门的要求</td>
+<td><em>无特别提及</em></td>
+</tr>
+<tr>
+<td><strong>数据分析和推送</strong></td>
+<td>使用数据分析推送广告的要求</td>
+<td><em>无特别提及</em></td>
+</tr>
+<tr>
+<td><strong>数据安全</strong></td>
+<td><em>无明显区别</em></td>
+<td><em>无明显区别</em></td>
+</tr>
+<tr>
+<td><strong>数据泄露</strong></td>
+<td><em>无特别提及</em></td>
+<td>针对数据流露处理和响应的要求</td>
+</tr>
+<tr>
+<td><strong>知情同意</strong></td>
+<td><em>无特别提及</em></td>
+<td>收集和使用信息前获得用户同意的要求</td>
+</tr>
+<tr>
+<td><strong>隐私请求管理</strong></td>
+<td>增加了用户注销的要求</td>
+<td>其他处理用户有关隐私的请求的要求无明显区别</td>
+</tr>
+</tbody>
+</table>
+<p><strong>我把两个法律要求集中分析了以下，发现关键词出现最频繁的是…</strong></p>
+<p><img src="/2019/01/16/China-regulations/2.JPG" alt=""></p>
+<h2><span id="2-网络安全法-vs-电子商务法"> 2. 网络安全法 vs 电子商务法</span></h2>
+<p>简单地对比一下两个法律的侧重领域，见下图。显然用户权益和电子支付是电子商务法特有的，然而，*（我有点意外）*分级分类和业务持续性竟然在电子商务法没有特别提及。可能电子商务法还是更侧重在商务领域吧。</p>
+<p>我的个人看法：即使不具体列举业务持续性的要求，像“数字化安全（Digital Security）”一样提及一下也是必要的。当电子商务对行业发展变得这么重要后，平台的高可用和容灾能力直接影响业务的可用性，这并不比数据安全的重要性低。</p>
+<p><img src="/2019/01/16/China-regulations/1.JPG" alt=""></p>
+<h2><span id="3-较有中国特色-vs-行业内常见"> 3. 较有中国特色 vs 行业内常见</span></h2>
+<p><strong>这个章节也是为了抛砖引玉，我可能有理解不到位的地方，仅供大家参考。</strong></p>
+<p>没有意外的是合规性要求比较多，例如实名制、资格审查、内容管理、境内储存关键数据、报送有关主管部门等等。</p>
+<p><code>需要特别指出的是，“较有中国特色”是个中性词，这不意味着要求是负面的或总是有关政府的，有些要求还蛮有创意，个人认为挺不错的</code>。举个例子，电子商务法的第三十九条：</p>
+<blockquote>
+<p><strong>第三十九条</strong>　电子商务平台经营者应当建立健全信用评价制度，公示信用评价规则，为消费者提供对平台内销售的商品或者提供的服务进行评价的途径。<br>
+电子商务平台经营者不得删除消费者对其平台内销售的商品或者提供的服务的评价。</p>
+</blockquote>
+<p>这条关于信用评价制度的要求自然是有益于服务提供者和消费者的。这在很多国内外的电子商务平台可能都有了，但是在法律里规范地写出来，无疑是进步的。同样的例子还有推送广告时要<code>向该消费者提供不针对其个人特征的选项，尊重和平等保护消费者合法权益</code>的要求。</p>
+<p>还有几条十分细致的，对实际操作有影响的要求，这样细致的要求我还没在英国或者欧盟的法律文件里看到。<em>（如果我理解错了，这只是由于我的阅读量不够，请指正）</em> 例如：</p>
+<blockquote>
+<p><strong>第十九条</strong>　电子商务经营者搭售商品或者服务，应当以显著方式提请消费者注意，不得将搭售商品或者服务作为默认同意的选项。</p>
+<p><strong>第二十一条</strong>　电子商务经营者按照约定向消费者收取押金的，应当明示押金退还的方式、程序，不得对押金退还设置不合理条件。消费者申请退还押金，符合押金退还条件的，电子商务经营者应当及时退还。</p>
+</blockquote>
+<p><img src="/2019/01/16/China-regulations/5.JPG" alt=""></p>
+<p>具体看看到底涉及哪些较有中国特色的控制要求…</p>
+<p><img src="/2019/01/16/China-regulations/6.JPG" alt=""></p>
+<p>再附上行业内常见的控制要求作为参考…</p>
+<p><img src="/2019/01/16/China-regulations/7.JPG" alt=""></p>
+<h2><span id="4-控制要求的适用范围"> 4. 控制要求的适用范围</span></h2>
+<p>最后，简单地看一下适用范围：</p>
+<p><img src="/2019/01/16/China-regulations/8.JPG" alt=""></p>
+<p>是不是发现要求少了很多，压力稍微减轻了点？😄</p>
+<p><img src="/2019/01/16/China-regulations/9.JPG" alt=""></p>
+<p>再看电子商务法的，按角色对号入座后，要求其实也不是很多。</p>
+<hr>
+<p><strong>欢迎讨论</strong></p>
+
+      
+    </div>
+
+    
+
+<div>    
+ 
+ 
+    <ul class="post-copyright">
+      <li class="post-copyright-author">
+          <strong>本文作者：</strong>杨小芳 Xiaofang Yang
+      </li>
+      <li class="post-copyright-link">
+        <strong>本文链接：</strong>
+        <a href="/2019/01/16/China-regulations/" title="网络安全法和电子商务法里的IT控制要求">2019/01/16/China-regulations/</a>
+      </li>
+      <li class="post-copyright-license">
+        <strong>版权声明： </strong>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a><br>本作品由<span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">杨小芳</span>采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。转载请注明出处！
+	<strong>Copyright: </strong>
+	<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a><br>This work by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Xiaofang Yang</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+      </li>
+    </ul>
+  
+</div>
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/中国法规/" rel="tag"># 中国法规</a>
+          
+            <a href="/tags/网络安全法/" rel="tag"># 网络安全法</a>
+          
+            <a href="/tags/电子商务法/" rel="tag"># 电子商务法</a>
+          
+            <a href="/tags/安全合规/" rel="tag"># 安全合规</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+               <div id="needsharebutton-postbottom">
+                 <span class="btn">
+                    <i class="fa fa-share-alt" aria-hidden="true"></i>
+                 </span>
+               </div>
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/11/DevSecOps-Measurement/" rel="next" title="DevOps benchmarking metrics and review framework">
+                <i class="fa fa-chevron-left"></i> DevOps benchmarking metrics and review framework
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/18/IT-IA/" rel="prev" title="How to respond to internal audit">
+                How to respond to internal audit <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="杨小芳 Xiaofang Yang">
+            
+              <p class="site-author-name" itemprop="name">杨小芳 Xiaofang Yang</p>
+              <p class="site-description motion-element" itemprop="description">个人博客</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="mailto:yangxfang@yahoo.com" title="E-Mail &rarr; mailto:yangxfang@yahoo.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
+                </span>
+              
+            </div>
+          
+
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-text"> 网络安全法和电子商务法里的IT控制要求</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text"> 1. 控制领域概况</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text"> 网络安全法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text"> 电子商务法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text"> 2. 网络安全法 vs 电子商务法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text"> 3. 较有中国特色 vs 行业内常见</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text"> 4. 控制要求的适用范围</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">杨小芳 Xiaofang Yang</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.7.0"></script>
+
+  <script src="/js/src/motion.js?v=6.7.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=6.7.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=6.7.0"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=6.7.0"></script>
+<script src="/js/src/post-details.js?v=6.7.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.7.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script>
+    
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function ({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+              var $element = $(document.getElementById(url));
+              $element.find('.leancloud-visitors-count').text(counter.time + 1);
+            
+            Counter('put', `/classes/Counter/${counter.objectId}`, JSON.stringify({ time: { "__op":"Increment", "amount":1 } }))
+            
+            .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+            })
+          } else {
+            
+              var $element = $(document.getElementById(url));
+              $element.find('.leancloud-visitors-count').text('Counter not initialized! See more at console err msg.');
+              console.error('ATTENTION! LeanCloud counter has security bug, see here how to solve it: https://github.com/theme-next/hexo-leancloud-counter-security. \n But you also can use LeanCloud without security, by set \'security\' option to \'false\'.');
+            
+          }
+        })
+      .fail(function ({ responseJSON }) {
+        console.log('LeanCloud Counter Error:' + responseJSON.code + " " + responseJSON.error);
+      });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + "bmIs2c6KDiWOJi8ULcK9NdOm-gzGzoHsz")
+        .done(function ({ api_server }) {
+          var Counter = function (method, url, data) {
+            return $.ajax({
+              method: method,
+              url: `https://${api_server}/1.1${url}`,
+              headers: {
+                'X-LC-Id': "bmIs2c6KDiWOJi8ULcK9NdOm-gzGzoHsz",
+                'X-LC-Key': "RtY7Khr4sTnb34hk98BU0JsJ",
+                'Content-Type': 'application/json',
+              },
+              data: data,
+            });
+          };
+          
+          addCount(Counter);
+          
+        })
+    });
+  </script>
+
+
+
+  
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+      }
+      else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+  <script>
+    
+      pbOptions = {};
+      
+        pbOptions.iconStyle = "box";
+      
+        pbOptions.boxForm = "horizontal";
+      
+        pbOptions.position = "bottomCenter";
+      
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+        flOptions.iconStyle = "box";
+      
+        flOptions.boxForm = "horizontal";
+      
+        flOptions.position = "middleRight";
+      
+        flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function () {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
+
+  
+
+</body>
+</html>
