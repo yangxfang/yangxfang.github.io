@@ -1,0 +1,9 @@
+Host github
+	HostName github.com
+	User git
+	IdentityFile ~/Documents/Myblog/yangxfang.github.io/hexo.key
+
+Host Coding
+	HostName coding.net
+	User git
+	IdentityFile ~/Documents/Myblog/yangxfang.github.io/hexo.coding.key
