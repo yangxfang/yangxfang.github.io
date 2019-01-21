@@ -5,7 +5,7 @@ environment:
         secure: XoHGfaAeYjvhUVVfwFrYpLWrOUU7f/3PXVxMJq2bdo6oc1phTZIlSqZyQMPY8O4F
 
 install:
-    - ps: Install-Product node 6.0 #原始环境的node 是4.x的版本，最好升级到最新的版本，防止Hexo的插件无法安装
+    - ps: Install-Product node 10.0
     - node --version
     - npm --version
     - npm install
