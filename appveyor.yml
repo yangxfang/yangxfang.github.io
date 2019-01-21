@@ -3,8 +3,8 @@ clone_depth: 5
 environment:
     access_token:
         secure: XoHGfaAeYjvhUVVfwFrYpLWrOUU7f/3PXVxMJq2bdo6oc1phTZIlSqZyQMPY8O4F
+
 install:
-    - ps: Install-Product node 10.15 # 默认node版本太老
     - node --version
     - npm --version
     - npm install
