@@ -9,8 +9,9 @@ install:
     - node --version
     - npm --version
     - npm install
+    - npm rebuild node-sass
     - npm install hexo-cli -g
-    
+   
 build_script:
     - hexo generate
     
