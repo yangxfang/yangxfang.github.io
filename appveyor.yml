@@ -12,7 +12,7 @@ install:
     - npm rebuild node-sass
     - npm install hexo-cli -g
     - npm install
-    - npm install .\themes\next\
+    #- npm install .\themes\next\
    
 build_script:
     - hexo generate
