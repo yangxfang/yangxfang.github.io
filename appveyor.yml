@@ -10,7 +10,7 @@ install:
     - npm --version
     - npm install
     - npm rebuild node-sass
-    - npm install fsevents
+    - npm i -f
     - npm install hexo-cli -g
    
 build_script:
