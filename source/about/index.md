@@ -25,7 +25,7 @@ The idea of writing down and sharing my views on IT security and compliance rela
 
 
 
-[view my profile on Linkedin](www.linkedin.com/in/xiaofang-yang) | [contact me](mail:yangxfang@yahoo.com)
+[view my profile on Linkedin](https://www.linkedin.com/in/xiaofang-yang) | [contact me](mailto:yangxfang@yahoo.com)
 
-[访问我的Linkedin首页](www.linkedin.com/in/xiaofang-yang) | [联系我](mail:yangxfang@yahoo.com)
+[访问我的Linkedin首页](https://www.linkedin.com/in/xiaofang-yang) | [联系我](mailto:yangxfang@yahoo.com)
 
