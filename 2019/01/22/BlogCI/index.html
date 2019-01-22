@@ -108,20 +108,23 @@
 
 
 
-  <meta name="description" content="免责声明 Disclaimer 杨小芳的个人博客免责声明 1、关 于 本 站 （1） 本站为个人博客门户，作为个人的网络空间和技术家园，与朋友们共同探讨技术和专业知识，其服务是无偿的；本站不保证向用户提供的外部链接的准确性和完整性，该外部链接指向的不由本站实际控制的任何网页上的内容，本站对其合法性亦概不负责，亦不承担任何法律责任，本站内所有内容亦不表明本站之观点或意见。 （2）本个人博客门户中的">
-<meta property="og:type" content="website">
-<meta property="og:title" content="免责声明 Disclaimer">
-<meta property="og:url" content="https://yangxfang.cn/Disclaimer/index.html">
+  <meta name="description" content="我在上篇博客Hexo+Github建个人博客里写了如何搭建这个博客，在那之后我又做了些事，比如：对我的博客做了一些优化、同时发布到coding.net以便国内用户访问、绑定个人域名yangxfang.cn、推送网站给Google和百度搜索等。这些操作相对问题不多，网上有很多人写了详细步骤做参考。但是，在我弄持续集成时参考了很多人的文章和Github上的问题解决方案，还是折腾了很久才搞定，我决定把这">
+<meta name="keywords" content="how to">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo博客的持续集成和Next主题排错">
+<meta property="og:url" content="https://yangxfang.cn/2019/01/22/BlogCI/index.html">
 <meta property="og:site_name" content="杨小芳">
-<meta property="og:description" content="免责声明 Disclaimer 杨小芳的个人博客免责声明 1、关 于 本 站 （1） 本站为个人博客门户，作为个人的网络空间和技术家园，与朋友们共同探讨技术和专业知识，其服务是无偿的；本站不保证向用户提供的外部链接的准确性和完整性，该外部链接指向的不由本站实际控制的任何网页上的内容，本站对其合法性亦概不负责，亦不承担任何法律责任，本站内所有内容亦不表明本站之观点或意见。 （2）本个人博客门户中的">
+<meta property="og:description" content="我在上篇博客Hexo+Github建个人博客里写了如何搭建这个博客，在那之后我又做了些事，比如：对我的博客做了一些优化、同时发布到coding.net以便国内用户访问、绑定个人域名yangxfang.cn、推送网站给Google和百度搜索等。这些操作相对问题不多，网上有很多人写了详细步骤做参考。但是，在我弄持续集成时参考了很多人的文章和Github上的问题解决方案，还是折腾了很久才搞定，我决定把这">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-22T19:33:54.988Z">
+<meta property="og:image" content="https://yangxfang.cn/2019/01/22/BlogCI/1.jpg">
+<meta property="og:image" content="https://yangxfang.cn/2019/01/22/BlogCI/2.jpg">
+<meta property="og:image" content="https://yangxfang.cn/2019/01/22/BlogCI/3.jpg">
+<meta property="og:updated_time" content="2019-01-22T19:33:55.004Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="免责声明 Disclaimer">
-<meta name="twitter:description" content="免责声明 Disclaimer 杨小芳的个人博客免责声明 1、关 于 本 站 （1） 本站为个人博客门户，作为个人的网络空间和技术家园，与朋友们共同探讨技术和专业知识，其服务是无偿的；本站不保证向用户提供的外部链接的准确性和完整性，该外部链接指向的不由本站实际控制的任何网页上的内容，本站对其合法性亦概不负责，亦不承担任何法律责任，本站内所有内容亦不表明本站之观点或意见。 （2）本个人博客门户中的">
+<meta name="twitter:title" content="Hexo博客的持续集成和Next主题排错">
+<meta name="twitter:description" content="我在上篇博客Hexo+Github建个人博客里写了如何搭建这个博客，在那之后我又做了些事，比如：对我的博客做了一些优化、同时发布到coding.net以便国内用户访问、绑定个人域名yangxfang.cn、推送网站给Google和百度搜索等。这些操作相对问题不多，网上有很多人写了详细步骤做参考。但是，在我弄持续集成时参考了很多人的文章和Github上的问题解决方案，还是折腾了很久才搞定，我决定把这">
+<meta name="twitter:image" content="https://yangxfang.cn/2019/01/22/BlogCI/1.jpg">
 
-
-  
 
 
   <link rel="alternate" href="/atom.xml" title="杨小芳" type="application/atom+xml">
@@ -129,7 +132,7 @@
 
 
 
-  <link rel="canonical" href="https://yangxfang.cn/Disclaimer/">
+  <link rel="canonical" href="https://yangxfang.cn/2019/01/22/BlogCI/">
 
 
 
@@ -139,7 +142,7 @@
   };
 </script>
 
-  <title>免责声明 Disclaimer | 杨小芳</title>
+  <title>Hexo博客的持续集成和Next主题排错 | 杨小芳</title>
   
 
 
@@ -280,7 +283,7 @@
         
         
           
-          <li class="menu-item menu-item-免责声明-disclaimer menu-item-active">
+          <li class="menu-item menu-item-免责声明-disclaimer">
 
     
     
@@ -351,86 +354,323 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yangxfang.cn/2019/01/22/BlogCI/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="杨小芳 Xiaofang Yang">
+      <meta itemprop="description" content="个人博客">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="杨小芳">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h2 class="post-title" itemprop="name headline">免责声明 Disclaimer
-
-</h2>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body han-init-context">
         
         
-          <h1><span id="免责声明-disclaimer"> 免责声明 Disclaimer</span></h1>
-<p><strong>杨小芳的个人博客免责声明</strong></p>
-<p><strong>1、关 于 本 站</strong></p>
-<p>（1） 本站为个人博客门户，作为个人的网络空间和技术家园，与朋友们共同探讨技术和专业知识，其服务是无偿的；本站不保证向用户提供的外部链接的准确性和完整性，该外部链接指向的不由本站实际控制的任何网页上的内容，本站对其合法性亦概不负责，亦不承担任何法律责任，本站内所有内容亦不表明本站之观点或意见。</p>
-<p>（2）本个人博客门户中的文章（包括转贴文章）的版权仅归原作者所有，若作者有版权声明的或文章从其它网站转载而附带有原所有站的版权声明者，其版权归属以附带声明为准。</p>
-<p>（3）任何单位或个人认为本站内容可能涉嫌侵犯其合法权益，应该及时向本站书面反馈，并提供身份证明、权属证明及详细情况证明，本站在收到上述文件后将会尽快移除相关内容。</p>
-<p>（4）由于与本个人博客门户链接的其它网站所造成之个人资料泄露及由此而导致的任何法律争议和后果，本站均得免责。</p>
-<p>（5）本个人博客门户是静态网页，不提供任何用户注册或登录功能，不保留任何个人信息。如有任何个人使用评论功能记录个人信息的，应该自行删除评论或及时向本站书面反馈删除，未采取任一措施而导致个人信息泄露、丢失、盗用或篡改的，本站均得免责。</p>
-<p>（6）凡以任何方式登陆本站或直接、间接使用本站资料者，视为自愿接受本站声明的约束。</p>
-<p><strong>2、网 站 运 行</strong></p>
-<p>（1）本个人博客门户使用GitHub.com和Coding.com的Pages服务进行网页发布，所有内容在以上两个网站完全公开，服务的可用性完全依赖以上两个网站。</p>
-<p>（2）本个人博客门户不使用Cookie技术记录任何个人网络访问痕迹。</p>
-<p><strong>3、法 律 责 任</strong></p>
-<p>（1）本个人博客门户使用者因为违反本声明的规定而触犯中华人民共和国法律的，一切后果自己负责，本站不承担任何责任。</p>
-<p>（2）凡以任何方式登陆本站或直接、间接使用本网站资料者，视为自愿接受本网站声明的约束。</p>
-<p>（3）本声明未涉及的问题参见国家有关法律法规，当本声明与国家 法律法规冲突时，以国家法律法规为准。</p>
+          <h2 class="post-title" itemprop="name headline">Hexo博客的持续集成和Next主题排错
 
+              
+            
+          </h2>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-01-22 16:45:32 / 修改时间：19:33:55" itemprop="dateCreated datePublished" datetime="2019-01-22T16:45:32+00:00">2019-01-22</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/01/22/BlogCI/" class="leancloud_visitors" data-flag-title="Hexo博客的持续集成和Next主题排错">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
       
       
+
+      
+        <p>我在上篇博客<a href="https://yangxfang.cn/2019/01/05/hexo-github/">Hexo+Github建个人博客</a>里写了如何搭建这个博客，在那之后我又做了些事，比如：对我的博客做了一些优化、同时发布到coding.net以便国内用户访问、<a href="http://xn--yangxfang-uk6nq3clz8aiwl6vmtx2k.cn" target="_blank" rel="noopener">绑定个人域名yangxfang.cn</a>、推送网站给Google和百度搜索等。这些操作相对问题不多，网上有很多人写了详细步骤做参考。但是，在我弄持续集成时参考了很多人的文章和Github上的问题解决方案，还是折腾了很久才搞定，我决定把这个过程记录下来做参考。</p>
+<h2><span id="环境构成和平台"> 环境构成和平台</span></h2>
+<ul>
+<li>HEXO    — 博客的框架</li>
+<li>Next     — 主题</li>
+<li>Github    — 代码托管和Pages服务</li>
+<li>Appveyor    — 持续集成平台</li>
+</ul>
+<h2><span id="为什么持续集成"> 为什么持续集成</span></h2>
+<p>因为源代码都在一台电脑上，意味着我编辑好博客内容后，要在这台电脑上敲<code>hexo g &amp;&amp; hexo d</code>发布，换一台电脑就不行了。而且要是源代码在这台电脑上丢失或者损坏了，就只能重新部署和配置hexo和Next了，然鹅在经过长时间的优化、配置修改和插件安装后，我哪里还记得要装什么，要改什么。</p>
+<p>所以，解决如上问题的方案是<code>持续集成</code>，英文叫做<code>Continuous Integration</code>。</p>
+<h2><span id="解释下逻辑"> 解释下逻辑</span></h2>
+<p>电脑1 -----&gt;<br>
+|<br>
+电脑2 -----&gt; — Git Push to source code repo — &gt; Github &lt; —Build in Pages repo-- &gt; Appveyor<br>
+|<br>
+电脑N -----&gt;</p>
+<ul>
+<li>所有电脑上的更新推送到Github的源代码分支 <em>(你可以自定义分支名称，我的叫Hexo)</em></li>
+<li>Github库和Appveyor已经集成了，所以源代码分支一产生更新，Appveyor执行一次build</li>
+<li>Appveyor的Build任务将生成的静态网页内容推送到Github的Pages服务所用的分支 <em>(默认是master)</em></li>
+<li>完成！</li>
+</ul>
+<p>直接用Hexo d的逻辑也就是：Hexo在本地生成好静态网页内容并推送到Github的Pages服务所用的分支。</p>
+<p>理解了就可以开干了 😃</p>
+<h2><span id="准备工作"> 准备工作</span></h2>
+<ul>
+<li>注册Appveyor，有免费滴！</li>
+<li>本地和GitHub建立SSH信任：具体步骤在上一篇博客讲了；以后的其他电脑都需要做这一步骤</li>
+</ul>
+<h2><span id="建立并推送源代码分支到github"> 建立并推送源代码分支到Github</span></h2>
+<p><em>源代码分支在后面叫做Hexo</em></p>
+<ul>
+<li>
+<p>显示本地博客根目录的隐藏文件</p>
+<ul>
+<li>
+<p>如有.git，删掉。</p>
+</li>
+<li>
+<p>编辑.gitignore，修改为如下内容；这个文件告诉Git哪些目录不需要推送</p>
+<blockquote>
+<p>public/<br>
+.deploy*/</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p>新建Git分支</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git init		<span class="comment">#初始化Git</span></span><br><span class="line">git remote add origin git@https://github.com/xxxxxxxxxxxxxxx.git	<span class="comment">#添加你的Git库</span></span><br><span class="line">git pull origin master		<span class="comment">#把当前的master分支拉下来，避免后面冲突</span></span><br><span class="line">git branch hexo	<span class="comment">#新建分支hexo放源代码</span></span><br><span class="line">git checkout hexo	<span class="comment">#切换到hexo分支</span></span><br><span class="line">git add .	<span class="comment">#将除了.gitignore以外的内容添加到hexo分支</span></span><br><span class="line">git commit -m <span class="string">"XXXX"</span>	<span class="comment"># -m就是message的意思，给这次commit备注一下</span></span><br><span class="line">git push origin hexo	<span class="comment"># 将分支推送到Git库</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>新建Appveyor持续集成项目</p>
+<ul>
+<li>
+<p>选择Github，settings里将Default branch和branches to build修改为hexo，即源代码分支</p>
+<p><img src="/2019/01/22/BlogCI/1.jpg" alt=""></p>
+</li>
+<li>
+<p>进入Environment，添加如下环境变量，GIT_USER_EMAIL和GIT_USER_NAME就是你的git用户名与邮箱地址，用来连接Github；TARGET_BRANCH就是静态网页所在的分支。</p>
+<p><img src="/2019/01/22/BlogCI/2.jpg" alt=""></p>
+</li>
+<li>
+<p>在Github的个人账号的<code>Setting &gt; Developer settings &gt; Personal access tokens</code>里新建一个Token。</p>
+<p><img src="/2019/01/22/BlogCI/3.jpg" alt=""></p>
+</li>
+<li>
+<p>用Appveyor的<a href="https://ci.appveyor.com/tools/encrypt" target="_blank" rel="noopener">工具加密token</a>。</p>
+</li>
+<li>
+<p>在博客根目录下新建一个文件，命名 为appveyor.yml，内容如下，请参考备注决定你需不需要这些步骤。我在网上搜到的很多版本貌似都比较老旧了，不太适用于新版本。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">clone_depth: 6</span><br><span class="line"></span><br><span class="line">environment:</span><br><span class="line">    access_token:</span><br><span class="line">        secure: [这里放加密后的token，不需要[]]</span><br><span class="line"></span><br><span class="line">install:</span><br><span class="line">    - ps: Install-Product node 10.0		<span class="comment">#安装最新版node</span></span><br><span class="line">    - node --version</span><br><span class="line">    - npm --version</span><br><span class="line">    - npm install npm@latest -g			<span class="comment">#安装最新版npm</span></span><br><span class="line">    - npm rebuild node-sass			<span class="comment">#因build报错，我需要rebuildnode-sass，如果没有此报错则不需要</span></span><br><span class="line">    - npm install hexo-cli -g		<span class="comment">#安装hexo</span></span><br><span class="line">    - npm install					<span class="comment">#安装package.json里的所有依赖包</span></span><br><span class="line">   </span><br><span class="line">build_script:</span><br><span class="line">    - hexo generate			<span class="comment"># hexo生成静态网页</span></span><br><span class="line">    </span><br><span class="line">artifacts:</span><br><span class="line">    - path: public		<span class="comment">#静态网页放在public目录下</span></span><br><span class="line">    </span><br><span class="line">on_success:			<span class="comment">#下方脚本是为了推送静态网页到相对应的Github库和支线</span></span><br><span class="line">    - git config --global credential.helper store</span><br><span class="line">    - ps: Add-Content <span class="string">"<span class="variable">$env</span>:USERPROFILE\.git-credentials"</span> <span class="string">"https://<span class="variable">$($env:access_token)</span>:x-oauth-basic@github.com`n"</span></span><br><span class="line">    - git config --global user.email <span class="string">"%GIT_USER_EMAIL%"</span></span><br><span class="line">    - git config --global user.name <span class="string">"%GIT_USER_NAME%"</span></span><br><span class="line">    - git <span class="built_in">clone</span> --depth 5 -q --branch=%TARGET_BRANCH% %STATIC_SITE_REPO% %TEMP%\static-site</span><br><span class="line">    - <span class="built_in">cd</span> %TEMP%\static-site</span><br><span class="line">    - del * /f /q</span><br><span class="line">    - <span class="keyword">for</span> /d %%p IN (*) <span class="keyword">do</span> rmdir <span class="string">"%%p"</span> /s /q</span><br><span class="line">    - SETLOCAL EnableDelayedExpansion &amp; robocopy <span class="string">"%APPVEYOR_BUILD_FOLDER%\public"</span> <span class="string">"%TEMP%\static-site"</span> /e &amp; IF !ERRORLEVEL! EQU 1 (<span class="built_in">exit</span> 0) ELSE (IF !ERRORLEVEL! EQU 3 (<span class="built_in">exit</span> 0) ELSE (<span class="built_in">exit</span> 1))</span><br><span class="line">    - git add -A</span><br><span class="line">    - git commit -m <span class="string">"Update Static Site"</span></span><br><span class="line">    - git push origin %TARGET_BRANCH%</span><br><span class="line">    - appveyor AddMessage <span class="string">"Static Site Updated"</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li>
+<p>使用持续集成：每次更新（包括修改了配置文件）只需执行以下步骤即可。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .	<span class="comment">#将除了.gitignore以外的内容添加到hexo分支</span></span><br><span class="line">git commit -m <span class="string">"XXXX"</span>	<span class="comment"># -m就是message的意思，给这次commit备注一下</span></span><br><span class="line">git push origin hexo	<span class="comment"># 将分支推送到Git库</span></span><br></pre></td></tr></table></figure>
+<p>Appveyor随机会自动执行appveyor.yml里定义的build步骤，打开控制台就可以看到完整的过程和结果。</p>
+</li>
+</ul>
+<h2><span id="修复next主题无法推送的问题"> 修复Next主题无法推送的问题</span></h2>
+<p>完成上一节的步骤后，居然发现网站一片空白…… 我查了半天，才发现原来是因为Next主题的所有文件都没有被推送到Hexo分支，网上提供的方案大致有：1、删除Next下的Git；2、使用subtree；3、使用submodule。方法2和方法3据说比较好，支持未来版本升级。但是我用了方法1，因为简单方便，希望版本升级的话请查询其他人的博客。</p>
+<ul>
+<li>
+<p>删除next目录下的隐藏文件夹.git</p>
+</li>
+<li>
+<p>编辑next目录下的.gitignore，删除所有有关source/lib，因为大部分的第三方工具都会被跳过。</p>
+</li>
+<li>
+<p>打开source/lib，这里放了你启用的所有第三方工具的文件。对于必须的工具，删除这些目录下的.git文件夹。不操作这一步的结果是，这些工具的文件不会被上传到Github，网页不会正确、全部显示该有的信息或者功能。</p>
+</li>
+<li>
+<p>执行如下步骤：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git rm -r --cached themes/next/		<span class="comment">#去除分支里的缓存，同样针对必需的第三方工具，用相同的命令去除缓存，相应的目录就是themes/next/source/lib/XXXXX</span></span><br><span class="line">git add .	<span class="comment">#将除了.gitignore以外的内容添加到hexo分支</span></span><br><span class="line">git commit -m <span class="string">"XXXX"</span>	<span class="comment"># -m就是message的意思，给这次commit备注一下</span></span><br><span class="line">git push origin hexo	<span class="comment"># 将分支推送到Git库</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>这下是真的搞定了！不过上述步骤真的是简单暴力，请自行评估哦。</p>
+</li>
+</ul>
+
       
     </div>
-    
-
-
 
     
+
+<div>    
+ 
+ 
+    <ul class="post-copyright">
+      <li class="post-copyright-author">
+          <strong>本文作者：</strong>杨小芳 Xiaofang Yang
+      </li>
+      <li class="post-copyright-link">
+        <strong>本文链接：</strong>
+        <a href="/2019/01/22/BlogCI/" title="Hexo博客的持续集成和Next主题排错">2019/01/22/BlogCI/</a>
+      </li>
+      <li class="post-copyright-license">
+        <strong>版权声明： </strong>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a><br>本作品由<span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">杨小芳</span>采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。转载请注明出处！
+	<strong>Copyright: </strong>
+	<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a><br>This work by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Xiaofang Yang</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+      </li>
+    </ul>
+  
+</div>
+
     
     
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/how-to/" rel="tag"># how to</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+               <div id="needsharebutton-postbottom">
+                 <span class="btn">
+                    <i class="fa fa-share-alt" aria-hidden="true"></i>
+                 </span>
+               </div>
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/18/IT-IA/" rel="next" title="How to respond to internal audit">
+                <i class="fa fa-chevron-left"></i> How to respond to internal audit
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
@@ -585,7 +825,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-text"> 免责声明 Disclaimer</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text"> 环境构成和平台</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text"> 为什么持续集成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text"> 解释下逻辑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text"> 准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text"> 建立并推送源代码分支到Github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text"> 修复Next主题无法推送的问题</span></a></li></ol></div>
             
 
           </div>
@@ -1106,43 +1346,35 @@
   
   <script>
     
-    function showTime(Counter) {
-      var entries = [];
+    function addCount(Counter) {
       var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
 
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { "$in": entries } }) })
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
         .done(function ({ results }) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.url;
-            var time = item.time;
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
+          if (results.length > 0) {
+            var counter = results[0];
+            
+              var $element = $(document.getElementById(url));
+              $element.find('.leancloud-visitors-count').text(counter.time + 1);
+            
+            Counter('put', `/classes/Counter/${counter.objectId}`, JSON.stringify({ time: { "__op":"Increment", "amount":1 } }))
+            
+            .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+            })
+          } else {
+            
+              var $element = $(document.getElementById(url));
+              $element.find('.leancloud-visitors-count').text('Counter not initialized! See more at console err msg.');
+              console.error('ATTENTION! LeanCloud counter has security bug, see here how to solve it: https://github.com/theme-next/hexo-leancloud-counter-security. \n But you also can use LeanCloud without security, by set \'security\' option to \'false\'.');
+            
           }
         })
-        .fail(function ({ responseJSON }) {
-          console.log("LeanCloud Counter Error: " + responseJSON.code + " " + responseJSON.error);
-        });
+      .fail(function ({ responseJSON }) {
+        console.log('LeanCloud Counter Error:' + responseJSON.code + " " + responseJSON.error);
+      });
     }
     
 
@@ -1162,9 +1394,7 @@
             });
           };
           
-          if ($('.post-title-link').length >= 1) {
-            showTime(Counter);
-          }
+          addCount(Counter);
           
         })
     });
