@@ -349,27 +349,6 @@
       {% include '../_partials/post/post-related.swig' with { post: post } %}
     {% endif %}
 
-<div>    
- {# 表示如果不在索引列表中加入后续的HTML代码 #}
- {% if not is_index %}
-    <ul class="post-copyright">
-      <li class="post-copyright-author">
-          <strong>本文作者：</strong>{{ theme.author }}
-      </li>
-      <li class="post-copyright-link">
-        <strong>本文链接：</strong>
-        <a href="{{ url_for(page.path) }}" title="{{ page.title }}">{{ page.path }}</a>
-      </li>
-      <li class="post-copyright-license">
-        <strong>版权声明： </strong>
-        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />本作品由<span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">杨小芳</span>采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。转载请注明出处！
-	<strong>Copyright: </strong>
-	<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Xiaofang Yang</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
-      </li>
-    </ul>
-  {% endif %}
-</div>
-
     {#####################}
     {### END POST BODY ###}
     {#####################}

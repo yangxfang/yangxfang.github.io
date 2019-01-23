@@ -45,12 +45,12 @@ cache:
 # For example, you put your favicons into `hexo-site/source/images` directory.
 # Then need to rename & redefine them on any other names, otherwise icons from Next will rewrite your custom icons in Hexo.
 favicon:
-  small: /images/favicon-16x16-next.png
-  medium: /images/favicon-32x32-next.png
-  apple_touch_icon: /images/apple-touch-icon-next.png
-  safari_pinned_tab: /images/logo.svg
-  #android_manifest: /images/manifest.json
-  #ms_browserconfig: /images/browserconfig.xml
+  small: /images/favicon-16x16.png
+  medium: /images/favicon-32x32.png
+  apple_touch_icon: /images/apple-touch-icon.png
+  safari_pinned_tab: /images/safari_pinned_tab.svg
+  android_manifest: /images/site.webmanifest
+  ms_browserconfig: /images/browserconfig.xml
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link, and install hexo-generator-feed: `npm install hexo-generator-feed --save`.
@@ -103,7 +103,7 @@ footer:
 creative_commons:
   license: by-nc-sa
   sidebar: true
-  post: false
+  post: true
 
 
 # ---------------------------------------------------------------
@@ -145,7 +145,7 @@ menu:
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
-  免责声明 Disclaimer: /Disclaimer/ 
+  免责声明 Disclaimer: /Disclaimer/ || info-circle
 
 # Enable/Disable menu icons / item badges.
 menu_settings:
@@ -159,9 +159,9 @@ menu_settings:
 
 # Schemes
 #scheme: Muse
-#scheme: Mist
+scheme: Mist
 #scheme: Pisces
-scheme: Gemini
+#scheme: Gemini
 
 
 # ---------------------------------------------------------------
@@ -259,7 +259,7 @@ sidebar:
   # Scroll percent label in b2t button.
   scrollpercent: true
   # Enable sidebar on narrow view (only for Muse | Mist).
-  onmobile: false
+  onmobile: true
 
 
 # ---------------------------------------------------------------
@@ -279,7 +279,7 @@ excerpt_description: true
 # Use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
   enable: true
-  length: 250
+  length: 200
 
 # Read more button
 # If true, the read more button would be displayed in excerpt section.
@@ -290,7 +290,7 @@ post_meta:
   item_text: true
   created_at: true
   updated_at:
-    enabled: true
+    enabled: false
     # If true, show updated date label only if `updated date` different from `created date` (post edited in another day than was created).
     # And if post will edited in same day as created, edited time will show in popup title under created time label.
     # If false show anyway, but if post edited in same day, show only edited time.
@@ -552,7 +552,7 @@ valine:
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-#livere_uid: your uid
+livere_uid: MTAyMC80MjMwNS8xODg1Mg==
 
 # Gitment
 # Introduction: https://github.com/imsun/gitment
@@ -623,7 +623,7 @@ needmoreshare2:
 #google_site_verification:
 
 # Google Analytics
-#google_analytics:
+google_analytics: UA-86489815-2
 
 # Bing Webmaster tools verification setting
 # See: https://www.bing.com/webmaster
@@ -635,7 +635,7 @@ needmoreshare2:
 
 # Baidu Webmaster tools verification setting
 # See: https://ziyuan.baidu.com/site
-baidu_site_verification: RiinqsunWw
+# baidu_site_verification: RiinqsunWw
 
 # CNZZ count
 #cnzz_siteid:
@@ -787,7 +787,7 @@ note:
   #  - modern    bs-callout new (v2-v3) alert style.
   #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
   #  - disabled  disable all CSS styles import of note tag.
-  style: modern
+  style: flat
   icons: true
   border_radius: 3
   # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
@@ -865,7 +865,7 @@ pace_theme: pace-theme-minimal
 # Canvas-nest
 # Dependencies: https://github.com/theme-next/theme-next-canvas-nest
 canvas_nest:
-  enable: false
+  enable: true
   onmobile: true # display on mobile or not
   color: '0,0,255' # RGB values, use ',' to separate
   opacity: 0.5 # the opacity of line: 0~1

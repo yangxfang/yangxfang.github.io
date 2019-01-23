@@ -20,6 +20,7 @@
       </div>
 
       {% for post in page.posts %}
+	  
         {{ post_template.render(post) }}
       {% endfor %}
     </div>
@@ -35,3 +36,4 @@
 {% block sidebar %}
   {{ sidebar_template.render(false) }}
 {% endblock %}
+

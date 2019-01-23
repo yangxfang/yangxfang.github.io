@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 杨小芳
-subtitle: Information Security Management
-description: 个人博客
-keywords:
+title: 杨小芳 Xiaofang Yang 
+subtitle: 个人博客 Blog
+description: 有关信息安全管理 Something about information security management
+keywords: 信息安全,合规,IT审计,IT控制,Information security,Compliance,IT Audit,IT Control
 author: 杨小芳 Xiaofang Yang
 language: zh-CN
 timezone:
@@ -22,7 +22,7 @@ permalink_defaults:
 sitemap:
   path: sitemap.xml
 baidusitemap:
-  patg: baidusitemap.xml
+  path: baidusitemap.xml
 
 # Directory
 source_dir: source
@@ -109,3 +109,8 @@ leancloud_counter_security:
   username: yangxfang1 # Will be asked while deploying if is left blank
   password: dysjog-juwrUv-8kysbi 
 
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
