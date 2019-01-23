@@ -2,72 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://yangxfang.cn/2019/01/01/Starting-my-blog/</loc>
+    <loc>https://yangxfang.cn/tags/index.html</loc>
     
-    <lastmod>2019-01-23T14:10:38.558Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yangxfang.cn/2019/01/05/hexo-github/</loc>
-    
-    <lastmod>2019-01-23T14:10:38.558Z</lastmod>
+    <lastmod>2019-01-23T16:47:09.216Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://yangxfang.cn/about/index.html</loc>
     
-    <lastmod>2019-01-23T14:10:38.558Z</lastmod>
+    <lastmod>2019-01-23T16:47:09.216Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://yangxfang.cn/categories/index.html</loc>
     
-    <lastmod>2019-01-23T14:10:38.558Z</lastmod>
+    <lastmod>2019-01-23T16:47:09.216Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://yangxfang.cn/tags/index.html</loc>
+    <loc>https://yangxfang.cn/2019/01/05/hexo-github/</loc>
     
-    <lastmod>2019-01-23T14:10:38.558Z</lastmod>
+    <lastmod>2019-01-23T16:47:09.200Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yangxfang.cn/2019/01/01/Starting-my-blog/</loc>
+    
+    <lastmod>2019-01-23T16:47:09.185Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://yangxfang.cn/2019/01/18/IT-IA/</loc>
     
-    <lastmod>2019-01-23T14:10:38.542Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yangxfang.cn/2019/01/11/DevSecOps-Measurement/</loc>
-    
-    <lastmod>2019-01-23T14:10:38.542Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yangxfang.cn/2019/01/22/BlogCI/</loc>
-    
-    <lastmod>2019-01-23T14:10:38.527Z</lastmod>
+    <lastmod>2019-01-23T16:47:09.169Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://yangxfang.cn/2019/01/16/China-regulations/</loc>
     
-    <lastmod>2019-01-23T14:10:38.527Z</lastmod>
+    <lastmod>2019-01-23T16:47:09.154Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yangxfang.cn/2019/01/22/BlogCI/</loc>
+    
+    <lastmod>2019-01-23T16:47:09.154Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yangxfang.cn/2019/01/11/DevSecOps-Measurement/</loc>
+    
+    <lastmod>2019-01-23T16:47:09.154Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://yangxfang.cn/Disclaimer/index.html</loc>
     
-    <lastmod>2019-01-23T14:10:38.527Z</lastmod>
+    <lastmod>2019-01-23T16:47:09.138Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yangxfang.cn/2019/01/23/SAP-Hana-Security/</loc>
+    
+    <lastmod>2019-01-23T16:37:16.708Z</lastmod>
     
   </url>
   
