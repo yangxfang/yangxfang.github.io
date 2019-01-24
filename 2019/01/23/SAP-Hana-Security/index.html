@@ -110,13 +110,13 @@
 
 
 
-  <meta name="description" content="开启一个新的学习计划：SAP S/4 Hana安全！这篇博客只是记录我的学习过程和心得，不会有什么系统化的解读或看法。所以，这里的心得不保证正确哦。😃 这是个浩大的学习过程，我会不定时更新这篇博客。等我有所成了，再就具体的话题写点东西。  2019-1 参考资料：  SAP HANA Security Technical Whitepaper SAP HANA Security Guide Th">
+  <meta name="description" content="开启一个新的学习计划：SAP S/4 Hana安全！这篇博客只是记录我的学习过程和心得，不会有什么系统化的解读或看法。所以，这里的心得不保证正确哦。😃 这是个浩大的学习过程，我会不定时更新这篇博客。等我有所成了，再就具体的话题写点东西。  2019-1 参考资料：  SAP HANA Security Technical Whitepaper SAP HANA Security Guide SA">
 <meta name="keywords" content="SAP Hana安全,SAP S&#x2F;4 Hana安全,学习笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SAP S&#x2F;4 Hana Security 学习笔记">
 <meta property="og:url" content="https://yangxfang.cn/2019/01/23/SAP-Hana-Security/index.html">
 <meta property="og:site_name" content="杨小芳 Xiaofang Yang">
-<meta property="og:description" content="开启一个新的学习计划：SAP S/4 Hana安全！这篇博客只是记录我的学习过程和心得，不会有什么系统化的解读或看法。所以，这里的心得不保证正确哦。😃 这是个浩大的学习过程，我会不定时更新这篇博客。等我有所成了，再就具体的话题写点东西。  2019-1 参考资料：  SAP HANA Security Technical Whitepaper SAP HANA Security Guide Th">
+<meta property="og:description" content="开启一个新的学习计划：SAP S/4 Hana安全！这篇博客只是记录我的学习过程和心得，不会有什么系统化的解读或看法。所以，这里的心得不保证正确哦。😃 这是个浩大的学习过程，我会不定时更新这篇博客。等我有所成了，再就具体的话题写点东西。  2019-1 参考资料：  SAP HANA Security Technical Whitepaper SAP HANA Security Guide SA">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://yangxfang.cn/2019/01/23/SAP-Hana-Security/1548255232998.png">
 <meta property="og:image" content="https://yangxfang.cn/2019/01/23/SAP-Hana-Security/1548256842259.png">
@@ -127,10 +127,12 @@
 <meta property="og:image" content="https://yangxfang.cn/2019/01/23/SAP-Hana-Security/1548260868063.png">
 <meta property="og:image" content="https://yangxfang.cn/2019/01/23/SAP-Hana-Security/1548261000598.png">
 <meta property="og:image" content="https://yangxfang.cn/2019/01/23/SAP-Hana-Security/1548261084396.png">
-<meta property="og:updated_time" content="2019-01-24T09:32:44.326Z">
+<meta property="og:image" content="https://yangxfang.cn/2019/01/23/SAP-Hana-Security/loio5c1b3111ea4c42759ec53ed73951a4d9_LowRes.png">
+<meta property="og:image" content="https://yangxfang.cn/2019/01/23/SAP-Hana-Security/loio2359b6098fa94756aa7422da03cb6915_LowRes.png">
+<meta property="og:updated_time" content="2019-01-24T11:07:09.819Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SAP S&#x2F;4 Hana Security 学习笔记">
-<meta name="twitter:description" content="开启一个新的学习计划：SAP S/4 Hana安全！这篇博客只是记录我的学习过程和心得，不会有什么系统化的解读或看法。所以，这里的心得不保证正确哦。😃 这是个浩大的学习过程，我会不定时更新这篇博客。等我有所成了，再就具体的话题写点东西。  2019-1 参考资料：  SAP HANA Security Technical Whitepaper SAP HANA Security Guide Th">
+<meta name="twitter:description" content="开启一个新的学习计划：SAP S/4 Hana安全！这篇博客只是记录我的学习过程和心得，不会有什么系统化的解读或看法。所以，这里的心得不保证正确哦。😃 这是个浩大的学习过程，我会不定时更新这篇博客。等我有所成了，再就具体的话题写点东西。  2019-1 参考资料：  SAP HANA Security Technical Whitepaper SAP HANA Security Guide SA">
 <meta name="twitter:image" content="https://yangxfang.cn/2019/01/23/SAP-Hana-Security/1548255232998.png">
 
 
@@ -470,7 +472,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.4k</span>
+                <span title="本文字数">4.2k</span>
               
 
               
@@ -484,7 +486,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">4 分钟</span>
               
             </div>
           
@@ -511,6 +513,7 @@
 <ul>
 <li>SAP HANA Security Technical Whitepaper</li>
 <li><a href="https://help.sap.com/viewer/b3ee5778bc2e4a089d3299b82ec762a7/2.0.03/en-US" target="_blank" rel="noopener">SAP HANA Security Guide</a></li>
+<li><a href="https://help.sap.com/viewer/6b94445c94ae495c83a19646e7c3fd56/2.0.03/en-US/330e5550b09d4f0f8b6cceb14a64cd22.html" target="_blank" rel="noopener">SAP HANA Administration Guide</a></li>
 <li><a href="https://help.sap.com/viewer/4505d0bdaf4948449b7f7379d24d0f0d/2.0.00/en-US/df19a03dc07e4ba19db4e0006c1da429.html" target="_blank" rel="noopener">The XS Advanced Programming Model</a></li>
 </ul>
 <p><strong>这个章节所有的图都来自于SAP官方</strong></p>
@@ -636,7 +639,7 @@
 <p>审计日志支持syslog</p>
 </li>
 <li>
-<p>SAP Hana默认部署为多租客模式Multi-tenancy；系统管理则可以集中进行。</p>
+<p>SAP Hana默认部署为多租客模式Multi-tenancy；系统管理则可以集中进行。所以，检查权限时需要同时检查Tenant DB和System DB。</p>
 <p><img src="/2019/01/23/SAP-Hana-Security/1548260868063.png" alt=""></p>
 </li>
 <li>
@@ -648,6 +651,98 @@
 <p><img src="/2019/01/23/SAP-Hana-Security/1548261084396.png" alt=""></p>
 </li>
 </ol>
+<h3><span id="sap-hana-security-guide的内容"> SAP HANA Security Guide的内容</span></h3>
+<p>一般性指引其实就是说打补丁，checklist的话分了两大块：SAP Hana Database和XS Advanced Model，即数据库与应用开发的安全指引。简要列举如下：</p>
+<p><strong>1. SAP Hana Database:</strong></p>
+<ul>
+<li>
+<p>Users, Roles, Privileges</p>
+<ul>
+<li>系统超级管理员SYSTEM和_SYS_REPO，只有这俩有DATA ADMIN（执行所有DDL），DEVELOPMENT（执行alter system）权限；_</li>
+<li>SYS_BI_CP_ALL权限有读所有数据权限，默认只有角色CONTENT ADMIN和MODELING有此权限，默认只有SYSTEM有此角色；</li>
+<li>默认没有用户有DEBUG权限，不可以将生产环境的DEBUG或ATTACH DEBUGGER指派给任何用户；</li>
+<li>角色 CONTENT_ADMIN应只分配给需要更新系统的DB用户；</li>
+<li>角色MODELING不应分配给任何用户，应作为模板的存在；</li>
+<li>角色SAP_INTERNAL_HANA_SUPPORT有所有底层的系统特权；</li>
+<li>不可给用户管理所有Repository的权限，可以分别授权；</li>
+<li><em>SYS</em>*密码永不过期；</li>
+<li>应只有USER ADMIN权限的用户可以修改CLIENT属性；</li>
+<li>完整的<a href="https://help.sap.com/viewer/b3ee5778bc2e4a089d3299b82ec762a7/2.0.03/en-US/de4ee8bbbb5710148a04f023da147c8d.html" target="_blank" rel="noopener">标准用户清单</a></li>
+</ul>
+</li>
+<li>
+<p>Network Configuration</p>
+<ul>
+<li>
+<p>没啥特别的建议，无非就是网络隔离之类的…网络连接图参考一下：</p>
+<p><img src="/2019/01/23/SAP-Hana-Security/loio5c1b3111ea4c42759ec53ed73951a4d9_LowRes.png" alt="Connections Between SAP HANA and External Components"></p>
+<p>分布式下网络连接图：</p>
+<p><img src="/2019/01/23/SAP-Hana-Security/loio2359b6098fa94756aa7422da03cb6915_LowRes.png" alt="SAP HANA Internal Connections"></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Data Encryption</p>
+<ul>
+<li>之前讲到秘钥保存在文件系统SSFS，所以就又有个master key，这个在安装时要设置，所以安全地保存此key很重要；同理还有PKI的master key；</li>
+<li>所有数据或者日志备份都会有个根加密秘钥root encryption key；</li>
+<li>SAP Hana client的连接信息（包括密码）保存在hdbuserstore；</li>
+<li>默认数据和日志加密是<code>没有</code>启用的。</li>
+</ul>
+</li>
+<li>
+<p>File system and Operating system</p>
+<ul>
+<li>OS用户有这些：sapadm (required to authenticate to SAP Host Agent)、<sid>adm (required by the SAP HANA database)、Dedicated OS users for every tenant database if the system is configured for high isolation；</sid></li>
+<li>文件的访问权限配置在indexserver.ini，默认权限是640 ([import_export] file_security=medium)；</li>
+<li>OS安全补丁默认<code>没有</code>安装。</li>
+</ul>
+</li>
+<li>
+<p>Auditing</p>
+<ul>
+<li>审计功能默认<code>没有</code>启用。</li>
+</ul>
+</li>
+<li>
+<p>Trace and Dump files</p>
+<ul>
+<li>没啥特别的，主要是协助运维人员排错的功能。</li>
+</ul>
+</li>
+<li>
+<p>Tenant database management</p>
+<ul>
+<li>所有tenant数据库使用同一个库用于身份验证，所以各个数据库应有自己的证书建立与验证系统的连接，避免一个数据库的用户可以访问其他数据库；</li>
+<li>配置黑名单文件multidb.ini，这里定义了哪些配置只能由系统管理员修改；</li>
+<li>可以禁用个别数据库功能以限制访问或使用。</li>
+</ul>
+</li>
+</ul>
+<p><strong>2. XS Advanced Model:</strong></p>
+<ul>
+<li>Administration user
+<ul>
+<li>超级管理员用户类型XSA_ADMIN，这应该只用于初始安装和配置，不可用于日常运维；</li>
+<li>完整的<a href="https://help.sap.com/viewer/b3ee5778bc2e4a089d3299b82ec762a7/2.0.03/en-US/04ede29ac92841c58c1749b070a66c4b.html" target="_blank" rel="noopener">标准用户清单</a></li>
+</ul>
+</li>
+<li>Organizations and spaces
+<ul>
+<li>Space是用来做应用隔离的， 一个Space的应用使用一个OS用户；</li>
+<li>不要用<sid>adm或任何特权账号来运行应用；</sid></li>
+<li>SAP系统应用在SAP Space里；</li>
+<li>使用个人账号登录XS CLI，就是说不要用系统或者应用账号。</li>
+</ul>
+</li>
+<li>Network Configuration
+<ul>
+<li>Platform Router类似于应用网关，接受来自外部的请求，需要合理配置一下；</li>
+<li>JDBC到SAP Hana的连接默认<code>不</code>加密，需要额外配置一下；</li>
+<li>默认下，XS Advanced服务器使用自签名证书。</li>
+</ul>
+</li>
+</ul>
 <p>— 未完待续 —</p>
 
       
@@ -923,7 +1018,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-text"> 2019-1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text"> 认识SAP S/4 Hana的架构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text"> 1. SAP Hana的架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text"> 2. SAP S/4 Hana的架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text"> 3. SAP Hana安全服务构成</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text"> SAP介绍的安全服务</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-text"> 2019-1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text"> 认识SAP S/4 Hana的架构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text"> 1. SAP Hana的架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text"> 2. SAP S/4 Hana的架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text"> 3. SAP Hana安全服务构成</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text"> SAP介绍的安全服务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text"> SAP HANA Security Guide的内容</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -955,7 +1050,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">32k</span>
+    <span title="站点总字数">33k</span>
   
 
   
@@ -964,7 +1059,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">29 分钟</span>
+    <span title="站点阅读时长">30 分钟</span>
   
 </div>
 
