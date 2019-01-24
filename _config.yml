@@ -88,7 +88,7 @@ deploy:
     repo: 
      #github: https://github.com/yangxfang/yangxfang.github.io.git,master
       coding: https://dev.tencent.com/u/yangxfang1/p/yangxfang1/git,master
-  - type: leancloud_counter_security_sync
+  #- type: leancloud_counter_security_sync
 
 markdown_it_plus:
   highlight: true
@@ -103,7 +103,7 @@ markdown_it_plus:
 
 
 leancloud_counter_security:
-  enable_sync: true
+  enable_sync: false
   app_id: bmIs2c6KDiWOJi8ULcK9NdOm-gzGzoHsz
   app_key: RtY7Khr4sTnb34hk98BU0JsJ
   username: yangxfang1 # Will be asked while deploying if is left blank
