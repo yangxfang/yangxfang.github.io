@@ -19,6 +19,7 @@ tags:
 
 - SAP HANA Security Technical Whitepaper
 - [SAP HANA Security Guide](https://help.sap.com/viewer/b3ee5778bc2e4a089d3299b82ec762a7/2.0.03/en-US)
+- [SAP HANA Administration Guide](https://help.sap.com/viewer/6b94445c94ae495c83a19646e7c3fd56/2.0.03/en-US/330e5550b09d4f0f8b6cceb14a64cd22.html)
 - [The XS Advanced Programming Model](https://help.sap.com/viewer/4505d0bdaf4948449b7f7379d24d0f0d/2.0.00/en-US/df19a03dc07e4ba19db4e0006c1da429.html)
 
 **这个章节所有的图都来自于SAP官方**
@@ -118,7 +119,7 @@ tags:
 
 9. 审计日志支持syslog
 
-10. SAP Hana默认部署为多租客模式Multi-tenancy；系统管理则可以集中进行。
+10. SAP Hana默认部署为多租客模式Multi-tenancy；系统管理则可以集中进行。所以，检查权限时需要同时检查Tenant DB和System DB。
 
     ![](SAP-Hana-Security/1548260868063.png)
 
@@ -129,6 +130,80 @@ tags:
 12. 存在可用的第三方安全工具和SAP Hana的接口
 
     ![](SAP-Hana-Security/1548261084396.png)
+
+
+
+### SAP HANA Security Guide的内容 ###
+
+一般性指引其实就是说打补丁，checklist的话分了两大块：SAP Hana Database和XS Advanced Model，即数据库与应用开发的安全指引。简要列举如下：
+
+**1. SAP Hana Database:**
+
+- Users, Roles, Privileges
+
+
+  - 系统超级管理员SYSTEM和_SYS_REPO，只有这俩有DATA ADMIN（执行所有DDL），DEVELOPMENT（执行alter system）权限；_
+  - SYS_BI_CP_ALL权限有读所有数据权限，默认只有角色CONTENT ADMIN和MODELING有此权限，默认只有SYSTEM有此角色；
+  - 默认没有用户有DEBUG权限，不可以将生产环境的DEBUG或ATTACH DEBUGGER指派给任何用户；
+  - 角色 CONTENT_ADMIN应只分配给需要更新系统的DB用户；
+  - 角色MODELING不应分配给任何用户，应作为模板的存在；
+  - 角色SAP_INTERNAL_HANA_SUPPORT有所有底层的系统特权；
+  - 不可给用户管理所有Repository的权限，可以分别授权；
+  - _SYS_*密码永不过期；
+  - 应只有USER ADMIN权限的用户可以修改CLIENT属性；
+  - 完整的[标准用户清单](https://help.sap.com/viewer/b3ee5778bc2e4a089d3299b82ec762a7/2.0.03/en-US/de4ee8bbbb5710148a04f023da147c8d.html)
+
+- Network Configuration
+
+  - 没啥特别的建议，无非就是网络隔离之类的......网络连接图参考一下：
+
+    ![Connections Between SAP HANA and External Components](SAP-Hana-Security/loio5c1b3111ea4c42759ec53ed73951a4d9_LowRes.png)
+
+    分布式下网络连接图：
+
+    ![SAP HANA Internal Connections](SAP-Hana-Security/loio2359b6098fa94756aa7422da03cb6915_LowRes.png)
+
+- Data Encryption
+
+  - 之前讲到秘钥保存在文件系统SSFS，所以就又有个master key，这个在安装时要设置，所以安全地保存此key很重要；同理还有PKI的master key；
+  - 所有数据或者日志备份都会有个根加密秘钥root encryption key；
+  - SAP Hana client的连接信息（包括密码）保存在hdbuserstore；
+  - 默认数据和日志加密是`没有`启用的。
+
+- File system and Operating system
+
+  - OS用户有这些：sapadm (required to authenticate to SAP Host Agent)、<sid>adm (required by the SAP HANA database)、Dedicated OS users for every tenant database if the system is configured for high isolation；
+  - 文件的访问权限配置在indexserver.ini，默认权限是640 ([import_export] file_security=medium)；
+  - OS安全补丁默认`没有`安装。
+
+- Auditing
+
+  - 审计功能默认`没有`启用。
+
+- Trace and Dump files
+
+  - 没啥特别的，主要是协助运维人员排错的功能。
+
+- Tenant database management
+
+  - 所有tenant数据库使用同一个库用于身份验证，所以各个数据库应有自己的证书建立与验证系统的连接，避免一个数据库的用户可以访问其他数据库；
+  - 配置黑名单文件multidb.ini，这里定义了哪些配置只能由系统管理员修改；
+  - 可以禁用个别数据库功能以限制访问或使用。
+
+**2. XS Advanced Model:**
+
+- Administration user
+  - 超级管理员用户类型XSA_ADMIN，这应该只用于初始安装和配置，不可用于日常运维；
+  - 完整的[标准用户清单](https://help.sap.com/viewer/b3ee5778bc2e4a089d3299b82ec762a7/2.0.03/en-US/04ede29ac92841c58c1749b070a66c4b.html)
+- Organizations and spaces
+  - Space是用来做应用隔离的， 一个Space的应用使用一个OS用户；
+  - 不要用<sid>adm或任何特权账号来运行应用；
+  - SAP系统应用在SAP Space里；
+  - 使用个人账号登录XS CLI，就是说不要用系统或者应用账号。
+- Network Configuration
+  - Platform Router类似于应用网关，接受来自外部的请求，需要合理配置一下；
+  - JDBC到SAP Hana的连接默认`不`加密，需要额外配置一下；
+  - 默认下，XS Advanced服务器使用自签名证书。
 
 
 
