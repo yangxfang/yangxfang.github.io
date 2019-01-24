@@ -13,7 +13,9 @@ tags:
 
 这是个浩大的学习过程，我会不定时更新这篇博客。等我有所成了，再就具体的话题写点东西。 
 
-# 2019-1 #
+@[TOC]
+
+
 
 参考资料：
 
@@ -21,6 +23,9 @@ tags:
 - [SAP HANA Security Guide](https://help.sap.com/viewer/b3ee5778bc2e4a089d3299b82ec762a7/2.0.03/en-US)
 - [SAP HANA Administration Guide](https://help.sap.com/viewer/6b94445c94ae495c83a19646e7c3fd56/2.0.03/en-US/330e5550b09d4f0f8b6cceb14a64cd22.html)
 - [The XS Advanced Programming Model](https://help.sap.com/viewer/4505d0bdaf4948449b7f7379d24d0f0d/2.0.00/en-US/df19a03dc07e4ba19db4e0006c1da429.html)
+- [Security Guide for SAP S/4HANA 1709 FPS01](https://www.sap.com/documents/2017/11/d42046ce-e27c-0010-82c7-eda71af511fa.html)                              *此文件超~~~~长，慎重跳进这个坑*
+- [UI Technology Guide for SAP S/4HANA 1709 FPS01](https://help.sap.com/doc/61634ead9e5144b89e7eca2b1d4b8bce/1709%20001/en-US/UITECH_OP1709_FPS01.pdf)
+- [SAP Information Lifecycle Management](https://help.sap.com/http.svc/rc/PRODUCTION/c3b6eda797634474b7a3aac5a48e84d5/1610%20002/en-US/frameset.htm?7fe188e04fdd462e8ec330bb80efc389.html)
 
 **这个章节所有的图都来自于SAP官方**
 
@@ -28,7 +33,7 @@ tags:
 
 ### 1. SAP Hana的架构 ###
 
-- Hana数据库最大的特征就是`数据存储和读取都在内存`进行，这区别于所有其他数据库技术。这意味着，数据访问、查询和操作的速度都会大大加快，因为去掉了内存和其他存储间的I/O吞吐。
+- Hana数据库最大的特征就是`数据存储和处理都在内存`进行，这区别于所有其他数据库技术。这意味着，数据访问、查询和操作的速度都会大大加快，因为去掉了内存和其他存储间的I/O吞吐。
 - 再看这个应用架构，所有类型的服务都模块化了：Application services和Integration & Quality Services属于支持型的服务；Processing Services是对用户可见的服务；安全（包括高可用、灾备）等设计是基于数据层的，这很有意思。
 
 ![](SAP-Hana-Security/1548255232998.png)
@@ -52,7 +57,11 @@ tags:
 
 1. 数据和日志分别备份到”硬盘 Disk"的不同卷
 
+   *[手工检查备份是否有效、数据能否恢复的方法](https://help.sap.com/viewer/6b94445c94ae495c83a19646e7c3fd56/2.0.03/en-US/77522ef1e3cb4d799bab33e0aeb9c93b.html)，有名：审计的好朋友 :)*
+
 2. Primary和Secondary系统的高可用模式是Active-Active，实现存储和系统级别的复制
+
+   a. 除了上面#1和#2，以下高可用服务是可用的，但需要配置：service auto-restart, host auto-failover
 
 3. 自定义数据分析报表可以将数据源导入Hana（即第三方数据源与Hana建立连接），然后在Hana定义针对此项目的数据访问权限，权限分配给用户
 
@@ -204,6 +213,86 @@ tags:
   - Platform Router类似于应用网关，接受来自外部的请求，需要合理配置一下；
   - JDBC到SAP Hana的连接默认`不`加密，需要额外配置一下；
   - 默认下，XS Advanced服务器使用自签名证书。
+
+### SAP S/4 Hana Security Guide的内容
+
+这里简要列举通用服务的安全，不涉及业务应用。
+
+**1. 用户管理**
+
+用户类型、角色和标准用户与此前的SAP版本没有显著差别。S/4有一个新的UI/UX技术，叫做Fiori。基于Fiori的app所带来的用户角色、权限管理会有所不同，具体逻辑见下图：
+
+- 使用PFCG管理用户角色；
+- Fiori UI定义哪些app可以被用户访问；
+- App的OData service读取有关业务数据；
+- Authentications模块验证用户是否有权限使用这些OData services。
+
+![1548335620217](SAP-Hana-Security/1548335620217.png)
+
+关于新的UI下的用户和App管理，SAP有一系列建议，具体的可以参考[UI Technology Guide for SAP S/4HANA 1709 FPS01](https://help.sap.com/doc/61634ead9e5144b89e7eca2b1d4b8bce/1709%20001/en-US/UITECH_OP1709_FPS01.pdf)。大体上就是最小化权限的原则，使用安全协议的连接等。
+
+**2. 网络和通讯安全**
+
+支持如下协议：
+
+- HTTP + TLS/SSL
+- RFC + SNC
+- SOAP + Web services security
+- IDoc
+- REST
+
+这里着重提到了SAP ICF，Internet Communication Framework，具体的可以参考[这个介绍](https://help.sap.com/doc/abapdocu_751_index_htm/7.51/en-US/abenicf.htm)。简单地说就是一系列安全的API接口，用于ABAP应用与互联网信息传输。既然是面向互联网，很多安全风险需要防范，例如病毒、XSS等，这个可以未来好好研究一下。
+
+**3. 病毒扫描**
+
+- 可以对上传和下载文件及模板进行病毒扫描；
+- 白名单需要维护，设置定义在自定义文件ZBASIC和ZEXTENDED；
+
+**4. Web安全**
+
+针对active content，此间技术是 SAP WebDispatcher和 Internet Communication Manager (ICM)，可以修改HTTP header。SAP的建议是增加以下内容到header：
+
+> - SetResponseHeader X-Content-Type-Options "nosniff"
+> *This tells the browser not to try reading the attached file with the assumed MIME type.*
+> - SetResponseHeader X-XSS-Protection "1; mode=block"
+> * This prevents cross-site scripting.*
+
+针对点击劫持（Click-Jacking），是用一种白名单的技术，就是说定义哪些主机和端口下的哪些页面、组件能在应用里显示。据说Fiori的方案还不一样，更安全什么的，具体待研究。
+
+**5. Unified Connectivity (UCON) administration framework**
+
+*还不是很清楚，有待下回分解......*
+
+**6. Scenario-based authorization check**
+
+*还不是很清楚，有待下回分解......*
+
+**7. Securing CALL TRANSACTION Statements**
+
+在用户调用T-code时检查其权限，系统调用则不用。对于新建的SAP S4/HANA环境，SAP建议值` auth/check/calltransaction=3`。
+
+**8. Read Access Logging**
+
+特别针对个人数据启动读数据的日志记录。
+
+**9. ILM: Information Lifecycle Management**
+
+基本框架如下，就是data retention + system decommissioning。列举了几个常见的使用场景：
+
+- Legal holds：因法务要求控制数据		*不晓得正确的中文翻译是啥-_-|||*
+- 财务、税务审计
+- Data retention
+- 销毁数据
+
+指引里有一些关于ILM本身数据安全的说明，可以看看做参考。
+
+*其实我感兴趣的是E-Discovery，还不是很清楚，有待下回分解......*
+
+![img](SAP-Hana-Security/loiof885e62961ef48d4b414637425b35697_LowRes.png)
+
+**10. 支付卡数据安全**
+
+*这又是个大坑，下次有空专门写一期这个吧.....*
 
 
 

@@ -3,16 +3,6 @@ title: Xiaofang Yang / 杨小芳
 date: 2019-01-01 19:51:07
 ---
 
-## A little about me ##
-
-*What I do*
-
-6 years’ experience in information security and 2.5 years in IT audit. I have experience with leading IT projects in security and business continuity areas and bringing successful risk assessments with improving IT control environments. Thanks to my work experience, I have great opportunity to work together with peoples from different countries, cultures and backgrounds, and know the ways of collaboration in a diverse environment. 
-
-*Why blog*
-
-The idea of writing down and sharing my views on IT security and compliance related topics is from my little plan for 2019. Most chinese blogs by IT guys focus on programing, technical study or 'how-to' deploy/use tools. I would like to post somethings about general IT controls or processes, high-level management methodology and risk analysis. Hope all my blog guests enjoy reading here. 
-
 ## 关于我 ##
 
 *我是做什么的*
@@ -22,6 +12,18 @@ The idea of writing down and sharing my views on IT security and compliance rela
 *为什么建立博客*
 
 这个主意始于我的2019新年计划，也就是说记录并且分享我关于一些IT安全和合规话题的看法。很多IT人士的中文博客比较关注于编程、技术研究或如何使用或部署工具。我的博客会更侧重于一般性的IT控制或流程、管理框架和风险分析。希望各位能够喜欢。
+
+
+
+## A little about me ##
+
+*What I do*
+
+6 years’ experience in information security and 2.5 years in IT audit. I have experience with leading IT projects in security and business continuity areas and bringing successful risk assessments with improving IT control environments. Thanks to my work experience, I have great opportunity to work together with peoples from different countries, cultures and backgrounds, and know the ways of collaboration in a diverse environment. 
+
+*Why blog*
+
+The idea of writing down and sharing my views on IT security and compliance related topics is from my little plan for 2019. Most chinese blogs by IT guys focus on programing, technical study or 'how-to' deploy/use tools. I would like to post somethings about general IT controls or processes, high-level management methodology and risk analysis. Hope all my blog guests enjoy reading here. 
 
 
 
