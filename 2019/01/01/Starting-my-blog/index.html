@@ -118,7 +118,7 @@
 <meta property="og:site_name" content="杨小芳 Xiaofang Yang">
 <meta property="og:description" content="2019年计划  写个人博客 每天一杯咖啡 坚持义工写信 坚持每周跑步、健身 学会开车">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-23T16:47:09.185Z">
+<meta property="og:updated_time" content="2019-01-24T06:54:53.047Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Starting my blog">
 <meta name="twitter:description" content="2019年计划  写个人博客 每天一杯咖啡 坚持义工写信 坚持每周跑步、健身 学会开车">
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">46</span>
+                <span title="本文字数">47</span>
               
 
               
@@ -498,7 +498,7 @@
       
 
       
-        <h1><span id="2019年计划">2019年计划</span></h1>
+        <h1><span id="2019年计划"> 2019年计划</span></h1>
 <ul>
 <li>写个人博客</li>
 <li>每天一杯咖啡</li>
@@ -777,7 +777,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-text">2019年计划</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-text"> 2019年计划</span></a></li></ol></div>
             
 
           </div>
@@ -809,7 +809,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">30k</span>
+    <span title="站点总字数">32k</span>
   
 
   
@@ -818,7 +818,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">28 分钟</span>
+    <span title="站点阅读时长">29 分钟</span>
   
 </div>
 
@@ -1335,10 +1335,12 @@
           if (results.length > 0) {
             var counter = results[0];
             
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text(counter.time + 1);
-            
             Counter('put', `/classes/Counter/${counter.objectId}`, JSON.stringify({ time: { "__op":"Increment", "amount":1 } }))
+            
+            .done(function () {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.time + 1);
+            })
             
             .fail(function ({ responseJSON }) {
                 console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
