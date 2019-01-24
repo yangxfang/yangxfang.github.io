@@ -118,7 +118,7 @@
 <meta property="og:site_name" content="杨小芳 Xiaofang Yang">
 <meta property="og:description" content="免责声明 Disclaimer 杨小芳的个人博客免责声明 1、关 于 本 站 （1） 本站为个人博客门户，作为个人的网络空间和技术家园，与朋友们共同探讨技术和专业知识，其服务是无偿的；本站不保证向用户提供的外部链接的准确性和完整性，该外部链接指向的不由本站实际控制的任何网页上的内容，本站对其合法性亦概不负责，亦不承担任何法律责任，本站内所有内容亦不表明本站之观点或意见。 （2）本个人博客门户中的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-24T06:54:53.016Z">
+<meta property="og:updated_time" content="2019-01-24T09:32:44.310Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="免责声明 Disclaimer">
 <meta name="twitter:description" content="免责声明 Disclaimer 杨小芳的个人博客免责声明 1、关 于 本 站 （1） 本站为个人博客门户，作为个人的网络空间和技术家园，与朋友们共同探讨技术和专业知识，其服务是无偿的；本站不保证向用户提供的外部链接的准确性和完整性，该外部链接指向的不由本站实际控制的任何网页上的内容，本站对其合法性亦概不负责，亦不承担任何法律责任，本站内所有内容亦不表明本站之观点或意见。 （2）本个人博客门户中的">
@@ -687,6 +687,15 @@
 
 
 
+  <script>
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66167266";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
 
 
 
@@ -1153,75 +1162,6 @@
 
 
   
-
-  
-  <script>
-    
-    function showTime(Counter) {
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { "$in": entries } }) })
-        .done(function ({ results }) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.url;
-            var time = item.time;
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function ({ responseJSON }) {
-          console.log("LeanCloud Counter Error: " + responseJSON.code + " " + responseJSON.error);
-        });
-    }
-    
-
-    $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + "bmIs2c6KDiWOJi8ULcK9NdOm-gzGzoHsz")
-        .done(function ({ api_server }) {
-          var Counter = function (method, url, data) {
-            return $.ajax({
-              method: method,
-              url: `https://${api_server}/1.1${url}`,
-              headers: {
-                'X-LC-Id': "bmIs2c6KDiWOJi8ULcK9NdOm-gzGzoHsz",
-                'X-LC-Key': "RtY7Khr4sTnb34hk98BU0JsJ",
-                'Content-Type': 'application/json',
-              },
-              data: data,
-            });
-          };
-          
-          if ($('.post-title-link').length >= 1) {
-            showTime(Counter);
-          }
-          
-        })
-    });
-  </script>
-
-
 
   
 

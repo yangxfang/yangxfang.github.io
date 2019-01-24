@@ -133,7 +133,7 @@
 <meta property="og:image" content="https://yangxfang.cn/2019/01/05/hexo-github/image-20190115214705591.png">
 <meta property="og:image" content="https://yangxfang.cn/2019/01/05/hexo-github/image-20190105112819264.png">
 <meta property="og:image" content="https://yangxfang.cn/2019/01/05/hexo-github/image-20190105113130759.png">
-<meta property="og:updated_time" content="2019-01-24T06:54:53.063Z">
+<meta property="og:updated_time" content="2019-01-24T09:32:44.342Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+Github建个人博客">
 <meta name="twitter:description" content="注册一个Github账号，新建一个repository  命名方式&amp;lt;Github用户名&amp;gt;.github.io，比如我的库叫做yangxfang.github.io。操作完毕后将这个名字输入浏览器地址栏就可以访问个人博客网站啦。 至于repository的设置，这是个Public库 😃   ​	在Settings里找到Github Pages，这里可以选择一个主题。这里就可以知道在G">
@@ -455,18 +455,14 @@
 
           
           
-             <span id="/2019/01/05/hexo-github/" class="leancloud_visitors" data-flag-title="Hexo+Github建个人博客">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数：</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
 
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
           
 
           
@@ -1007,6 +1003,15 @@
 
 
 
+  <script>
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66167266";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
 
 
 
@@ -1473,67 +1478,6 @@
 
 
   
-
-  
-  <script>
-    
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
-        .done(function ({ results }) {
-          if (results.length > 0) {
-            var counter = results[0];
-            
-            Counter('put', `/classes/Counter/${counter.objectId}`, JSON.stringify({ time: { "__op":"Increment", "amount":1 } }))
-            
-            .done(function () {
-                  var $element = $(document.getElementById(url));
-                  $element.find('.leancloud-visitors-count').text(counter.time + 1);
-            })
-            
-            .fail(function ({ responseJSON }) {
-                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
-            })
-          } else {
-            
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text('Counter not initialized! See more at console err msg.');
-              console.error('ATTENTION! LeanCloud counter has security bug, see here how to solve it: https://github.com/theme-next/hexo-leancloud-counter-security. \n But you also can use LeanCloud without security, by set \'security\' option to \'false\'.');
-            
-          }
-        })
-      .fail(function ({ responseJSON }) {
-        console.log('LeanCloud Counter Error:' + responseJSON.code + " " + responseJSON.error);
-      });
-    }
-    
-
-    $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + "bmIs2c6KDiWOJi8ULcK9NdOm-gzGzoHsz")
-        .done(function ({ api_server }) {
-          var Counter = function (method, url, data) {
-            return $.ajax({
-              method: method,
-              url: `https://${api_server}/1.1${url}`,
-              headers: {
-                'X-LC-Id': "bmIs2c6KDiWOJi8ULcK9NdOm-gzGzoHsz",
-                'X-LC-Key': "RtY7Khr4sTnb34hk98BU0JsJ",
-                'Content-Type': 'application/json',
-              },
-              data: data,
-            });
-          };
-          
-          addCount(Counter);
-          
-        })
-    });
-  </script>
-
-
 
   
 

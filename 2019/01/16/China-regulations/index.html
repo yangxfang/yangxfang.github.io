@@ -127,7 +127,7 @@
 <meta property="og:image" content="https://yangxfang.cn/2019/01/16/China-regulations/7.JPG">
 <meta property="og:image" content="https://yangxfang.cn/2019/01/16/China-regulations/8.JPG">
 <meta property="og:image" content="https://yangxfang.cn/2019/01/16/China-regulations/9.JPG">
-<meta property="og:updated_time" content="2019-01-24T06:54:53.016Z">
+<meta property="og:updated_time" content="2019-01-24T09:32:44.310Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络安全法和电子商务法里的IT控制要求">
 <meta name="twitter:description" content="网络安全法和电子商务法里的IT控制要求 说在前面 本文章纯属作者从IT（信息技术）的视角对两个法律的解读，总结出来的内容用于个人学习和讨论的用途，任何单位和个人不得用于商业用途。文章内容的版权和解释权归作者所有。此外，作者不是法律专业人士，不保证解读内容的准确性和完整性，内容不得用于任何与法律有关的学习或者活动。如有任何单位和个人对内容有异议，应该及时向本站书面反馈，并提供身份证明、权属证明或详">
@@ -449,18 +449,14 @@
 
           
           
-             <span id="/2019/01/16/China-regulations/" class="leancloud_visitors" data-flag-title="网络安全法和电子商务法里的IT控制要求">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数：</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
 
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
           
 
           
@@ -1023,6 +1019,15 @@
 
 
 
+  <script>
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66167266";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
 
 
 
@@ -1489,67 +1494,6 @@
 
 
   
-
-  
-  <script>
-    
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
-        .done(function ({ results }) {
-          if (results.length > 0) {
-            var counter = results[0];
-            
-            Counter('put', `/classes/Counter/${counter.objectId}`, JSON.stringify({ time: { "__op":"Increment", "amount":1 } }))
-            
-            .done(function () {
-                  var $element = $(document.getElementById(url));
-                  $element.find('.leancloud-visitors-count').text(counter.time + 1);
-            })
-            
-            .fail(function ({ responseJSON }) {
-                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
-            })
-          } else {
-            
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text('Counter not initialized! See more at console err msg.');
-              console.error('ATTENTION! LeanCloud counter has security bug, see here how to solve it: https://github.com/theme-next/hexo-leancloud-counter-security. \n But you also can use LeanCloud without security, by set \'security\' option to \'false\'.');
-            
-          }
-        })
-      .fail(function ({ responseJSON }) {
-        console.log('LeanCloud Counter Error:' + responseJSON.code + " " + responseJSON.error);
-      });
-    }
-    
-
-    $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + "bmIs2c6KDiWOJi8ULcK9NdOm-gzGzoHsz")
-        .done(function ({ api_server }) {
-          var Counter = function (method, url, data) {
-            return $.ajax({
-              method: method,
-              url: `https://${api_server}/1.1${url}`,
-              headers: {
-                'X-LC-Id': "bmIs2c6KDiWOJi8ULcK9NdOm-gzGzoHsz",
-                'X-LC-Key': "RtY7Khr4sTnb34hk98BU0JsJ",
-                'Content-Type': 'application/json',
-              },
-              data: data,
-            });
-          };
-          
-          addCount(Counter);
-          
-        })
-    });
-  </script>
-
-
 
   
 

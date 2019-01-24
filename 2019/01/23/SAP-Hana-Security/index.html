@@ -127,7 +127,7 @@
 <meta property="og:image" content="https://yangxfang.cn/2019/01/23/SAP-Hana-Security/1548260868063.png">
 <meta property="og:image" content="https://yangxfang.cn/2019/01/23/SAP-Hana-Security/1548261000598.png">
 <meta property="og:image" content="https://yangxfang.cn/2019/01/23/SAP-Hana-Security/1548261084396.png">
-<meta property="og:updated_time" content="2019-01-24T06:54:53.031Z">
+<meta property="og:updated_time" content="2019-01-24T09:32:44.326Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SAP S&#x2F;4 Hana Security 学习笔记">
 <meta name="twitter:description" content="开启一个新的学习计划：SAP S/4 Hana安全！这篇博客只是记录我的学习过程和心得，不会有什么系统化的解读或看法。所以，这里的心得不保证正确哦。😃 这是个浩大的学习过程，我会不定时更新这篇博客。等我有所成了，再就具体的话题写点东西。  2019-1 参考资料：  SAP HANA Security Technical Whitepaper SAP HANA Security Guide Th">
@@ -449,18 +449,14 @@
 
           
           
-             <span id="/2019/01/23/SAP-Hana-Security/" class="leancloud_visitors" data-flag-title="SAP S/4 Hana Security 学习笔记">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数：</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
 
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
           
 
           
@@ -1005,6 +1001,15 @@
 
 
 
+  <script>
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66167266";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
 
 
 
@@ -1471,67 +1476,6 @@
 
 
   
-
-  
-  <script>
-    
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
-        .done(function ({ results }) {
-          if (results.length > 0) {
-            var counter = results[0];
-            
-            Counter('put', `/classes/Counter/${counter.objectId}`, JSON.stringify({ time: { "__op":"Increment", "amount":1 } }))
-            
-            .done(function () {
-                  var $element = $(document.getElementById(url));
-                  $element.find('.leancloud-visitors-count').text(counter.time + 1);
-            })
-            
-            .fail(function ({ responseJSON }) {
-                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
-            })
-          } else {
-            
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text('Counter not initialized! See more at console err msg.');
-              console.error('ATTENTION! LeanCloud counter has security bug, see here how to solve it: https://github.com/theme-next/hexo-leancloud-counter-security. \n But you also can use LeanCloud without security, by set \'security\' option to \'false\'.');
-            
-          }
-        })
-      .fail(function ({ responseJSON }) {
-        console.log('LeanCloud Counter Error:' + responseJSON.code + " " + responseJSON.error);
-      });
-    }
-    
-
-    $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + "bmIs2c6KDiWOJi8ULcK9NdOm-gzGzoHsz")
-        .done(function ({ api_server }) {
-          var Counter = function (method, url, data) {
-            return $.ajax({
-              method: method,
-              url: `https://${api_server}/1.1${url}`,
-              headers: {
-                'X-LC-Id': "bmIs2c6KDiWOJi8ULcK9NdOm-gzGzoHsz",
-                'X-LC-Key': "RtY7Khr4sTnb34hk98BU0JsJ",
-                'Content-Type': 'application/json',
-              },
-              data: data,
-            });
-          };
-          
-          addCount(Counter);
-          
-        })
-    });
-  </script>
-
-
 
   
 

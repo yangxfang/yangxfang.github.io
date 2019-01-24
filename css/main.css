@@ -1987,7 +1987,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffffb8;
+  background: #2298b5;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2706,7 +2706,7 @@ hr {
   margin-top: 80px;
 }
 .header {
-  background: #f5f5f5;
+  background: url("https://source.unsplash.com/collection/641379/1600x100") no-repeat;
 }
 .header-inner {
   padding: 25px 0 20px;
@@ -3029,6 +3029,9 @@ hr {
     width: auto;
     text-align: center;
   }
+}
+.main-inner {
+  background: #fff;
 }
 .feed-link {
   margin-top: 15px;
