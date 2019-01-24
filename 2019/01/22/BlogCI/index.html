@@ -121,7 +121,7 @@
 <meta property="og:image" content="https://yangxfang.cn/2019/01/22/BlogCI/1.jpg">
 <meta property="og:image" content="https://yangxfang.cn/2019/01/22/BlogCI/2.jpg">
 <meta property="og:image" content="https://yangxfang.cn/2019/01/22/BlogCI/3.jpg">
-<meta property="og:updated_time" content="2019-01-24T11:07:09.803Z">
+<meta property="og:updated_time" content="2019-01-24T15:00:20.690Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo博客的持续集成和Next主题排错">
 <meta name="twitter:description" content="我在上篇博客Hexo+Github建个人博客里写了如何搭建这个博客，在那之后我又做了些事，比如：对我的博客做了一些优化、同时发布到coding.net以便国内用户访问、绑定个人域名、推送网站给Google和百度搜索等。这些操作相对问题不多，网上有很多人写了详细步骤做参考。但是，在我弄持续集成时参考了很多人的文章和Github上的问题解决方案，还是折腾了很久才搞定，我决定把这个过程记录下来做参考。">
@@ -499,21 +499,21 @@
 
       
         <p>我在上篇博客<a href="https://yangxfang.cn/2019/01/05/hexo-github/">Hexo+Github建个人博客</a>里写了如何搭建这个博客，在那之后我又做了些事，比如：对我的博客做了一些优化、同时发布到coding.net以便国内用户访问、绑定个人域名、推送网站给Google和百度搜索等。这些操作相对问题不多，网上有很多人写了详细步骤做参考。但是，在我弄持续集成时参考了很多人的文章和Github上的问题解决方案，还是折腾了很久才搞定，我决定把这个过程记录下来做参考。</p>
-<h2><span id="环境构成和平台"> 环境构成和平台</span></h2>
+<h2><span id="环境构成和平台">环境构成和平台</span></h2>
 <ul>
-<li>HEXO    — 博客的框架</li>
-<li>Next     — 主题</li>
-<li>Github    — 代码托管和Pages服务</li>
-<li>Appveyor    — 持续集成平台</li>
+<li>HEXO    --- 博客的框架</li>
+<li>Next     --- 主题</li>
+<li>Github    --- 代码托管和Pages服务</li>
+<li>Appveyor    --- 持续集成平台</li>
 </ul>
-<h2><span id="为什么持续集成"> 为什么持续集成</span></h2>
+<h2><span id="为什么持续集成">为什么持续集成</span></h2>
 <p>因为源代码都在一台电脑上，意味着我编辑好博客内容后，要在这台电脑上敲<code>hexo g &amp;&amp; hexo d</code>发布，换一台电脑就不行了。而且要是源代码在这台电脑上丢失或者损坏了，就只能重新部署和配置hexo和Next了，然鹅在经过长时间的优化、配置修改和插件安装后，我哪里还记得要装什么，要改什么。</p>
 <p>所以，解决如上问题的方案是<code>持续集成</code>，英文叫做<code>Continuous Integration</code>。</p>
-<h2><span id="解释下逻辑"> 解释下逻辑</span></h2>
-<p>电脑1 -----&gt;<br>
-|<br>
-电脑2 -----&gt; — Git Push to source code repo — &gt; Github &lt; —Build in Pages repo-- &gt; Appveyor<br>
-|<br>
+<h2><span id="解释下逻辑">解释下逻辑</span></h2>
+<p>电脑1 -----&gt;
+|
+电脑2 -----&gt; --- Git Push to source code repo --- &gt; Github &lt; ---Build in Pages repo-- &gt; Appveyor
+|
 电脑N -----&gt;</p>
 <ul>
 <li>所有电脑上的更新推送到Github的源代码分支 <em>(你可以自定义分支名称，我的叫Hexo)</em></li>
@@ -522,13 +522,13 @@
 <li>完成！</li>
 </ul>
 <p>直接用Hexo d的逻辑也就是：Hexo在本地生成好静态网页内容并推送到Github的Pages服务所用的分支。</p>
-<p>理解了就可以开干了 😃</p>
-<h2><span id="准备工作"> 准备工作</span></h2>
+<p>理解了就可以开干了 :)</p>
+<h2><span id="准备工作">准备工作</span></h2>
 <ul>
 <li>注册Appveyor，有免费滴！</li>
 <li>本地和GitHub建立SSH信任：具体步骤在上一篇博客讲了；以后的其他电脑都需要做这一步骤</li>
 </ul>
-<h2><span id="建立并推送源代码分支到github"> 建立并推送源代码分支到Github</span></h2>
+<h2><span id="建立并推送源代码分支到github">建立并推送源代码分支到Github</span></h2>
 <p><em>源代码分支在后面叫做Hexo</em></p>
 <ul>
 <li>
@@ -540,7 +540,7 @@
 <li>
 <p>编辑.gitignore，修改为如下内容；这个文件告诉Git哪些目录不需要推送</p>
 <blockquote>
-<p>public/<br>
+<p>public/
 .deploy*/</p>
 </blockquote>
 </li>
@@ -548,7 +548,7 @@
 </li>
 <li>
 <p>新建Git分支</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git init		<span class="comment">#初始化Git</span></span><br><span class="line">git remote add origin git@https://github.com/xxxxxxxxxxxxxxx.git	<span class="comment">#添加你的Git库</span></span><br><span class="line">git pull origin master		<span class="comment">#把当前的master分支拉下来，避免后面冲突</span></span><br><span class="line">git branch hexo	<span class="comment">#新建分支hexo放源代码</span></span><br><span class="line">git checkout hexo	<span class="comment">#切换到hexo分支</span></span><br><span class="line">git add .	<span class="comment">#将除了.gitignore以外的内容添加到hexo分支</span></span><br><span class="line">git commit -m <span class="string">"XXXX"</span>	<span class="comment"># -m就是message的意思，给这次commit备注一下</span></span><br><span class="line">git push origin hexo	<span class="comment"># 将分支推送到Git库</span></span><br></pre></td></tr></table></figure>
+<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git init		<span class="comment">#初始化Git</span></span><br><span class="line">git remote add origin git@https://github.com/xxxxxxxxxxxxxxx.git	<span class="comment">#添加你的Git库</span></span><br><span class="line">git pull origin master		<span class="comment">#把当前的master分支拉下来，避免后面冲突</span></span><br><span class="line">git branch hexo	<span class="comment">#新建分支hexo放源代码</span></span><br><span class="line">git checkout hexo	<span class="comment">#切换到hexo分支</span></span><br><span class="line">git add .	<span class="comment">#将除了.gitignore以外的内容添加到hexo分支</span></span><br><span class="line">git commit -m <span class="string">"XXXX"</span>	<span class="comment"># -m就是message的意思，给这次commit备注一下</span></span><br><span class="line">git push origin hexo	<span class="comment"># 将分支推送到Git库</span></span><br></pre></td></tr></table></figure></p>
 </li>
 <li>
 <p>新建Appveyor持续集成项目</p>
@@ -570,17 +570,17 @@
 </li>
 <li>
 <p>在博客根目录下新建一个文件，命名 为appveyor.yml，内容如下，请参考备注决定你需不需要这些步骤。我在网上搜到的很多版本貌似都比较老旧了，不太适用于新版本。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">clone_depth: 6</span><br><span class="line"></span><br><span class="line">environment:</span><br><span class="line">    access_token:</span><br><span class="line">        secure: [这里放加密后的token，不需要[]]</span><br><span class="line"></span><br><span class="line">install:</span><br><span class="line">    - ps: Install-Product node 10.0		<span class="comment">#安装最新版node</span></span><br><span class="line">    - node --version</span><br><span class="line">    - npm --version</span><br><span class="line">    - npm install npm@latest -g			<span class="comment">#安装最新版npm</span></span><br><span class="line">    - npm rebuild node-sass			<span class="comment">#因build报错，我需要rebuildnode-sass，如果没有此报错则不需要</span></span><br><span class="line">    - npm install hexo-cli -g		<span class="comment">#安装hexo</span></span><br><span class="line">    - npm install					<span class="comment">#安装package.json里的所有依赖包</span></span><br><span class="line">   </span><br><span class="line">build_script:</span><br><span class="line">    - hexo generate			<span class="comment"># hexo生成静态网页</span></span><br><span class="line">    </span><br><span class="line">artifacts:</span><br><span class="line">    - path: public		<span class="comment">#静态网页放在public目录下</span></span><br><span class="line">    </span><br><span class="line">on_success:			<span class="comment">#下方脚本是为了推送静态网页到相对应的Github库和支线</span></span><br><span class="line">    - git config --global credential.helper store</span><br><span class="line">    - ps: Add-Content <span class="string">"<span class="variable">$env</span>:USERPROFILE\.git-credentials"</span> <span class="string">"https://<span class="variable">$($env:access_token)</span>:x-oauth-basic@github.com`n"</span></span><br><span class="line">    - git config --global user.email <span class="string">"%GIT_USER_EMAIL%"</span></span><br><span class="line">    - git config --global user.name <span class="string">"%GIT_USER_NAME%"</span></span><br><span class="line">    - git <span class="built_in">clone</span> --depth 5 -q --branch=%TARGET_BRANCH% %STATIC_SITE_REPO% %TEMP%\static-site</span><br><span class="line">    - <span class="built_in">cd</span> %TEMP%\static-site</span><br><span class="line">    - del * /f /q</span><br><span class="line">    - <span class="keyword">for</span> /d %%p IN (*) <span class="keyword">do</span> rmdir <span class="string">"%%p"</span> /s /q</span><br><span class="line">    - SETLOCAL EnableDelayedExpansion &amp; robocopy <span class="string">"%APPVEYOR_BUILD_FOLDER%\public"</span> <span class="string">"%TEMP%\static-site"</span> /e &amp; IF !ERRORLEVEL! EQU 1 (<span class="built_in">exit</span> 0) ELSE (IF !ERRORLEVEL! EQU 3 (<span class="built_in">exit</span> 0) ELSE (<span class="built_in">exit</span> 1))</span><br><span class="line">    - git add -A</span><br><span class="line">    - git commit -m <span class="string">"Update Static Site"</span></span><br><span class="line">    - git push origin %TARGET_BRANCH%</span><br><span class="line">    - appveyor AddMessage <span class="string">"Static Site Updated"</span></span><br></pre></td></tr></table></figure>
+<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">clone_depth: 6</span><br><span class="line"></span><br><span class="line">environment:</span><br><span class="line">    access_token:</span><br><span class="line">        secure: [这里放加密后的token，不需要[]]</span><br><span class="line"></span><br><span class="line">install:</span><br><span class="line">    - ps: Install-Product node 10.0		<span class="comment">#安装最新版node</span></span><br><span class="line">    - node --version</span><br><span class="line">    - npm --version</span><br><span class="line">    - npm install npm@latest -g			<span class="comment">#安装最新版npm</span></span><br><span class="line">    - npm rebuild node-sass			<span class="comment">#因build报错，我需要rebuildnode-sass，如果没有此报错则不需要</span></span><br><span class="line">    - npm install hexo-cli -g		<span class="comment">#安装hexo</span></span><br><span class="line">    - npm install					<span class="comment">#安装package.json里的所有依赖包</span></span><br><span class="line">   </span><br><span class="line">build_script:</span><br><span class="line">    - hexo generate			<span class="comment"># hexo生成静态网页</span></span><br><span class="line">    </span><br><span class="line">artifacts:</span><br><span class="line">    - path: public		<span class="comment">#静态网页放在public目录下</span></span><br><span class="line">    </span><br><span class="line">on_success:			<span class="comment">#下方脚本是为了推送静态网页到相对应的Github库和支线</span></span><br><span class="line">    - git config --global credential.helper store</span><br><span class="line">    - ps: Add-Content <span class="string">"<span class="variable">$env</span>:USERPROFILE\.git-credentials"</span> <span class="string">"https://<span class="variable">$($env:access_token)</span>:x-oauth-basic@github.com`n"</span></span><br><span class="line">    - git config --global user.email <span class="string">"%GIT_USER_EMAIL%"</span></span><br><span class="line">    - git config --global user.name <span class="string">"%GIT_USER_NAME%"</span></span><br><span class="line">    - git <span class="built_in">clone</span> --depth 5 -q --branch=%TARGET_BRANCH% %STATIC_SITE_REPO% %TEMP%\static-site</span><br><span class="line">    - <span class="built_in">cd</span> %TEMP%\static-site</span><br><span class="line">    - del * /f /q</span><br><span class="line">    - <span class="keyword">for</span> /d %%p IN (*) <span class="keyword">do</span> rmdir <span class="string">"%%p"</span> /s /q</span><br><span class="line">    - SETLOCAL EnableDelayedExpansion &amp; robocopy <span class="string">"%APPVEYOR_BUILD_FOLDER%\public"</span> <span class="string">"%TEMP%\static-site"</span> /e &amp; IF !ERRORLEVEL! EQU 1 (<span class="built_in">exit</span> 0) ELSE (IF !ERRORLEVEL! EQU 3 (<span class="built_in">exit</span> 0) ELSE (<span class="built_in">exit</span> 1))</span><br><span class="line">    - git add -A</span><br><span class="line">    - git commit -m <span class="string">"Update Static Site"</span></span><br><span class="line">    - git push origin %TARGET_BRANCH%</span><br><span class="line">    - appveyor AddMessage <span class="string">"Static Site Updated"</span></span><br></pre></td></tr></table></figure></p>
 </li>
 </ul>
 </li>
 <li>
 <p>使用持续集成：每次更新（包括修改了配置文件）只需执行以下步骤即可。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .	<span class="comment">#将除了.gitignore以外的内容添加到hexo分支</span></span><br><span class="line">git commit -m <span class="string">"XXXX"</span>	<span class="comment"># -m就是message的意思，给这次commit备注一下</span></span><br><span class="line">git push origin hexo	<span class="comment"># 将分支推送到Git库</span></span><br></pre></td></tr></table></figure>
+<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .	<span class="comment">#将除了.gitignore以外的内容添加到hexo分支</span></span><br><span class="line">git commit -m <span class="string">"XXXX"</span>	<span class="comment"># -m就是message的意思，给这次commit备注一下</span></span><br><span class="line">git push origin hexo	<span class="comment"># 将分支推送到Git库</span></span><br></pre></td></tr></table></figure></p>
 <p>Appveyor随机会自动执行appveyor.yml里定义的build步骤，打开控制台就可以看到完整的过程和结果。</p>
 </li>
 </ul>
-<h2><span id="修复next主题无法推送的问题"> 修复Next主题无法推送的问题</span></h2>
+<h2><span id="修复next主题无法推送的问题">修复Next主题无法推送的问题</span></h2>
 <p>完成上一节的步骤后，居然发现网站一片空白…… 我查了半天，才发现原来是因为Next主题的所有文件都没有被推送到Hexo分支，网上提供的方案大致有：1、删除Next下的Git；2、使用subtree；3、使用submodule。方法2和方法3据说比较好，支持未来版本升级。但是我用了方法1，因为简单方便，希望版本升级的话请查询其他人的博客。</p>
 <ul>
 <li>
@@ -594,7 +594,7 @@
 </li>
 <li>
 <p>执行如下步骤：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git rm -r --cached themes/next/		<span class="comment">#去除分支里的缓存，同样针对必需的第三方工具，用相同的命令去除缓存，相应的目录就是themes/next/source/lib/XXXXX</span></span><br><span class="line">git add .	<span class="comment">#将除了.gitignore以外的内容添加到hexo分支</span></span><br><span class="line">git commit -m <span class="string">"XXXX"</span>	<span class="comment"># -m就是message的意思，给这次commit备注一下</span></span><br><span class="line">git push origin hexo	<span class="comment"># 将分支推送到Git库</span></span><br></pre></td></tr></table></figure>
+<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git rm -r --cached themes/next/		<span class="comment">#去除分支里的缓存，同样针对必需的第三方工具，用相同的命令去除缓存，相应的目录就是themes/next/source/lib/XXXXX</span></span><br><span class="line">git add .	<span class="comment">#将除了.gitignore以外的内容添加到hexo分支</span></span><br><span class="line">git commit -m <span class="string">"XXXX"</span>	<span class="comment"># -m就是message的意思，给这次commit备注一下</span></span><br><span class="line">git push origin hexo	<span class="comment"># 将分支推送到Git库</span></span><br></pre></td></tr></table></figure></p>
 </li>
 <li>
 <p>这下是真的搞定了！不过上述步骤真的是简单暴力，请自行评估哦。</p>
@@ -874,7 +874,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text"> 环境构成和平台</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text"> 为什么持续集成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text"> 解释下逻辑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text"> 准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text"> 建立并推送源代码分支到Github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text"> 修复Next主题无法推送的问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text">环境构成和平台</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text">为什么持续集成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text">解释下逻辑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text">建立并推送源代码分支到Github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text">修复Next主题无法推送的问题</span></a></li></ol></div>
             
 
           </div>
@@ -906,7 +906,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">33k</span>
+    <span title="站点总字数">34k</span>
   
 
   
@@ -915,7 +915,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">30 分钟</span>
+    <span title="站点阅读时长">31 分钟</span>
   
 </div>
 
