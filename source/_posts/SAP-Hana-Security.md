@@ -15,8 +15,6 @@ tags:
 
 @[TOC]
 
-
-
 参考资料：
 
 - SAP HANA Security Technical Whitepaper
