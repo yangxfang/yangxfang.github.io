@@ -1,7 +1,7 @@
 ---
 title: Managing privacy preference
 copyright: true
-top: 60
+top: 0
 date: 2019-01-27 12:05:57
 tags:
 - Data privacy
@@ -10,5 +10,7 @@ tags:
 ---
 
 
+
+to be updated
 
 ![](privacy-preference/1.png)
