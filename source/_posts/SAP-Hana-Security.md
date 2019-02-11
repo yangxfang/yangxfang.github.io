@@ -1,7 +1,7 @@
 ---
 title: SAP S/4 Hana Security 学习笔记
 copyright: true
-top: 50
+top: 40
 date: 2019-01-23 15:45:25
 tags: 
 - SAP Hana安全
@@ -13,7 +13,15 @@ tags:
 
 这是个浩大的学习过程，我会不定时更新这篇博客。等我有所成了，再就具体的话题写点东西。 
 
-@[TOC]
+---------------------------
+
+**本次更新内容**
+
+[Unified Connectivity (UCON) administration framework](#update-1)
+
+[ILM: Information Lifecycle Management](#update-2)
+
+--------------------
 
 参考资料：
 
@@ -257,23 +265,27 @@ tags:
 
 针对点击劫持（Click-Jacking），是用一种白名单的技术，就是说定义哪些主机和端口下的哪些页面、组件能在应用里显示。据说Fiori的方案还不一样，更安全什么的，具体待研究。
 
-**5. Unified Connectivity (UCON) administration framework**
+<span id="update-1">**5. Unified Connectivity (UCON) administration framework**</span>
 
-*还不是很清楚，有待下回分解......*
+- 这是一个RFC连接安全的解决方案，简单地来说就是找出需要用户交互的RFM， 拦截来自外部对所有其他RFM的访问。
 
-**6. Scenario-based authorization check**
+  - 据统计，只有很少的RFM是需要用户交互的（大约1%？），其他均是系统调用。
 
-*还不是很清楚，有待下回分解......*
+- 原理是多加了一层安全验证，如下图：
 
-**7. Securing CALL TRANSACTION Statements**
+  ![1549888302039](SAP-Hana-Security/1549888302039.png)
+
+- SAP有一个应用此方案的指引，可参考[Unified Connectivity (UCON) Overview](https://www.sap.com/documents/2015/07/ccf7ed8e-5b7c-0010-82c7-eda71af511fa.html)
+
+**6. Securing CALL TRANSACTION Statements**
 
 在用户调用T-code时检查其权限，系统调用则不用。对于新建的SAP S4/HANA环境，SAP建议值` auth/check/calltransaction=3`。
 
-**8. Read Access Logging**
+**7. Read Access Logging**
 
 特别针对个人数据启动读数据的日志记录。
 
-**9. ILM: Information Lifecycle Management**
+<span id="update-2">**8. ILM: Information Lifecycle Management**</span>
 
 基本框架如下，就是data retention + system decommissioning。列举了几个常见的使用场景：
 
@@ -282,13 +294,19 @@ tags:
 - Data retention
 - 销毁数据
 
-指引里有一些关于ILM本身数据安全的说明，可以看看做参考。
-
-*其实我感兴趣的是E-Discovery，还不是很清楚，有待下回分解......*
+指引里有一些关于ILM本身数据安全的说明，还可以参考[SAP ILM Detailed Presentation](https://archive.sap.com/kmuuid2/80e210b6-b1b9-2e10-0cb5-ff8e36743d3f/SAP%20ILM%20Detailed%20Presentation.pdf)。据SAP文档的描述，该系统也可用于管理非SAP系统的数据。
 
 ![img](SAP-Hana-Security/loiof885e62961ef48d4b414637425b35697_LowRes.png)
 
-**10. 支付卡数据安全**
+​	SAP有张不错的图来描述data lifecycle：
+
+​	![1549889263858](SAP-Hana-Security/1549889263858.png)
+
+
+
+​	
+
+**9. 支付卡数据安全**
 
 *这又是个大坑，下次有空专门写一期这个吧.....*
 
