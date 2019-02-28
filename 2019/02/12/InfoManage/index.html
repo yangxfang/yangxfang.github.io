@@ -120,7 +120,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://yangxfang.cn/2019/02/12/InfoManage/StakeholderMap.png">
 <meta property="og:image" content="https://yangxfang.cn/2019/02/12/InfoManage/ControlFramework.png">
-<meta property="og:updated_time" content="2019-02-18T15:38:18.050Z">
+<meta property="og:updated_time" content="2019-02-28T12:38:20.993Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据治理可以做什么？">
 <meta name="twitter:description" content="这篇文章是我的一些想法，没有拿来实际操作过，所以有些点可能不够专业或者不怎么具有实际操作性，欢迎任何意见或者建议。这些想法的的构建基于DGI的Data Governance Framework，该框架的所有信息都可以在网站http://www.datagovernance.com找到。 首先需要区别数据于IT，数据的价值即信息，信息的价值我就不赘述了。IT好比是一个城市的所有软硬件建设，而数据就是">
@@ -499,7 +499,7 @@
       
         <p>这篇文章是我的一些想法，没有拿来实际操作过，所以有些点可能不够专业或者不怎么具有实际操作性，欢迎任何意见或者建议。这些想法的的构建基于DGI的Data Governance Framework，该框架的所有信息都可以在网站http://www.datagovernance.com找到。</p>
 <p>首先需要区别数据于IT，数据的价值即信息，信息的价值我就不赘述了。IT好比是一个城市的所有软硬件建设，而数据就是生活在这个城市的人们。人们能否快速有效地利用城市资源以实现自身价值，这显然是需要引导和管理的，数据亦然。无论是业务部门还是IT部门，肯定都经历过一些数据问题，比如主数据混乱、重复或错误数据、数据泄露等。数据的治理是一定需要业务和IT的协作，乃至不同业务部门间的协作才能实现，原因很简单，IT不是业务数据的所有者，数据是跨部门使用的。</p>
-<h2><span id="哪些人是相关方">哪些人是相关方？</span></h2>
+<h2><span id="哪些人是相关方"> 哪些人是相关方？</span></h2>
 <p>在一个数据治理框架或项目里，如下团队或者个人应当属于相关方。影响力是指他们的决策或者行动对于数据治理的重要性，兴趣程度是指一般而言，他们对数据治理有关话题的关注程度。这里各个相关方的影响力和兴趣程度是我的个人判断，没有调研或者分析作为基础。</p>
 <table>
 <thead>
@@ -661,8 +661,8 @@
 </table>
 <p>所谓知己知彼才能百战不殆，分析相关方的一个重要目的是为了制定沟通策略。按照一般项目管理的相关方分析方法，可以绘制出下图。</p>
 <p><img src="/2019/02/12/InfoManage/StakeholderMap.png" alt=""></p>
-<h2><span id="要实现什么目标目标如何衡量">要实现什么目标？目标如何衡量？</span></h2>
-<h3><span id="1-扩大信息价值">1. 扩大信息价值</span></h3>
+<h2><span id="要实现什么目标目标如何衡量"> 要实现什么目标？目标如何衡量？</span></h2>
+<h3><span id="1-扩大信息价值"> 1. 扩大信息价值</span></h3>
 <ul>
 <li><strong>信息即商品</strong>：信息能够转化成可销售的产品（在合法合规的前提下）
 <ul>
@@ -680,7 +680,7 @@
 </ul>
 </li>
 </ul>
-<h3><span id="2-降低成本和复杂度">2. 降低成本和复杂度</span></h3>
+<h3><span id="2-降低成本和复杂度"> 2. 降低成本和复杂度</span></h3>
 <ul>
 <li><strong>减少重复率</strong>：包括master data和data records
 <ul>
@@ -703,7 +703,7 @@
 </ul>
 </li>
 </ul>
-<h3><span id="3-确保安全-合规和隐私">3. 确保安全、合规和隐私</span></h3>
+<h3><span id="3-确保安全-合规和隐私"> 3. 确保安全、合规和隐私</span></h3>
 <ul>
 <li><strong>控制数据泄露风险</strong>：所有重要、敏感、隐私数据。
 <ul>
@@ -726,7 +726,7 @@
 </ul>
 </li>
 </ul>
-<h3><span id="4-提高数据可信度">4. 提高数据可信度</span></h3>
+<h3><span id="4-提高数据可信度"> 4. 提高数据可信度</span></h3>
 <ul>
 <li><strong>保障财务报表的准确度</strong>
 <ul>
@@ -739,8 +739,8 @@
 </ul>
 </li>
 </ul>
-<h2><span id="如何实现目标">如何实现目标？</span></h2>
-<h3><span id="流程和控制框架">流程和控制框架</span></h3>
+<h2><span id="如何实现目标"> 如何实现目标？</span></h2>
+<h3><span id="流程和控制框架"> 流程和控制框架</span></h3>
 <p>为了支持以上四大目标，可以从六大方面出发来定义具体的政策、标准或者指引：</p>
 <ul>
 <li>数据质量</li>
@@ -753,7 +753,7 @@
 <p>其中很多流程都应当是已存在的，比如数据生命周期管理和数据安全里的大部分流程。但是，以IT服务为出发点设计这些流程和以数据为出发点来设计应当是不同的，比如，数据库管理、备份和归档在IT流程里完全可以分而治之。在理想的情况下，一份数据无论是进入‘生命’的哪个阶段（数据生命周期管理），无论是产生多少复本或者经历改动（数据质量），都应该是可追踪的、可回溯的（合规），并应用一贯的安全、访问（数据安全）或者隐私偏好设置（隐私保护）等策略，其产生的数据分析结果都应当是可信的，这一过程的控制缺陷能够被自动检测甚至修正（数据分析与自动化）。</p>
 <p><img src="/2019/02/12/InfoManage/ControlFramework.png" alt=""></p>
 <p>因此，如何能把这一系列的控制串联起来是很有意思的事情。</p>
-<p><em>--未完待续--</em></p>
+<p><em>–未完待续–</em></p>
 
       
     </div>
@@ -845,6 +845,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/02/28/relocation/" rel="prev" title="比利时搬家回国记">
+                比利时搬家回国记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -922,7 +926,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -975,7 +979,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">19</span>
+                      
+                    
+                    <span class="site-state-item-count">20</span>
                     <span class="site-state-item-name">标签</span>
                   
                 </div>
@@ -1040,7 +1046,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text">哪些人是相关方？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text">要实现什么目标？目标如何衡量？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text">1. 扩大信息价值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text">2. 降低成本和复杂度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text">3. 确保安全、合规和隐私</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text">4. 提高数据可信度</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text">如何实现目标？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text">流程和控制框架</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text"> 哪些人是相关方？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text"> 要实现什么目标？目标如何衡量？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text"> 1. 扩大信息价值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text"> 2. 降低成本和复杂度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text"> 3. 确保安全、合规和隐私</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text"> 4. 提高数据可信度</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text"> 如何实现目标？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text"> 流程和控制框架</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1072,7 +1078,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">40k</span>
+    <span title="站点总字数">43k</span>
   
 
   
@@ -1081,7 +1087,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">37 分钟</span>
+    <span title="站点阅读时长">39 分钟</span>
   
 </div>
 
