@@ -4,8 +4,7 @@ copyright: true
 top: 40
 date: 2019-01-23 15:45:25
 tags: 
-- SAP Hana安全
-- SAP S/4 Hana安全
+- SAP S/4 Hana
 - 学习笔记
 ---
 
